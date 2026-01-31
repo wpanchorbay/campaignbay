@@ -29,8 +29,8 @@ Yes. CampaignBay is designed to be compatible with all modern WordPress themes t
 
 This is the most common issue and is usually due to a simple configuration setting. Please run through this checklist:
 
-1.  **Is the Campaign `Active`?** Go to **CampaignBay → All Campaigns** and ensure the campaign's status is `Active` or `Scheduled`, not `Inactive` or `Expired`.
-2.  **Is the Schedule Correct?** If the campaign is `Scheduled`, make sure the current date and time are within the Start and End dates you have set.
+1.  **Is the Campaign `Active`?** Go to **CampaignBay → All Campaigns** and ensure the campaign's status toggle is set to **Active**.
+2.  **Is the Schedule Correct?** If "Enable Schedule" is checked, ensure the current time is between the Start and End dates. If it is outside this range, the campaign will not apply.
 3.  **Is the Product Targeted Correctly?** Double-check the "Discount Target" settings in your campaign. If it's targeted to a specific product or category, ensure the product you are testing is included in that target group.
 4.  **Is "Exclude Sale Items" Enabled?** This is a campaign-level setting. Edit your campaign and check under "Other Configurations" to see if the "Exclude Sale Items" box is checked. If it is, your campaign discount will not apply to any product that already has a native WooCommerce sale price.
 5.  **Is Caching Delaying the Update?** If you just created the campaign, there might be a small delay due to caching. Go to **Settings → Global Settings** and click the **"Clear Discount Cache"** button.
@@ -93,3 +93,12 @@ If you are troubleshooting an issue, the debug log is the best place to start.
 1.  Go to **Settings → Global Settings**.
 2.  Ensure the **"Enable Debug Mode"** checkbox is checked.
 3.  Click the **"View Logs"** button. This will open a modal showing the most recent events, which is invaluable for understanding how the discount engine is processing your cart.
+
+---
+
+## Next Steps
+
+Now that you've explored the FAQ, you're ready to start building your own campaigns!
+
+- **[Create a Campaign &rarr;](./campaigns/index.md)**
+- **[Back to Dashboard &rarr;](./dashboard.md)**

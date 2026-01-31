@@ -8,7 +8,7 @@ This guide provides a detailed explanation of each available targeting option.
 
 When you create or edit any campaign, you will see the "DISCOUNT TARGET" dropdown menu. This is where you select the core logic for how the plugin will find eligible products.
 
-![The main targeting options](./../public/targeting-options-dropdown.png)
+![The main targeting options](./../public/target-entire-store.png)
 
 There are three primary methods for targeting your discounts:
 
@@ -30,7 +30,7 @@ Let's explore each option in detail.
 - **Best for:** Promoting a new product, running a "Deal of the Week" on a specific item, or clearing out the remaining stock of a few specific products.
 - **Configuration:** When selected, a **"Select Products"** field will appear.
 
-![Selecting individual products](./../public/targeting-by-product.png)
+![Selecting individual products](./../public/target-by-product.png)
 
 - **Select Products:** Click inside the box and start typing the name of a product to search. Select one or more products from the list. If you select a **variable product**, the rule will apply to all of its variations.
 - **Exclude Items:** This powerful checkbox inverts the logic.
@@ -43,7 +43,7 @@ Let's explore each option in detail.
 - **Best for:** Targeted promotions, such as "15% off all T-Shirts" or a clearance sale on your "Electronics" and "Accessories" categories.
 - **Configuration:** When you select this option, a **"Select Categories"** field will appear.
 
-![Selecting product categories](./../public/targeting-by-category.png)
+![Selecting product categories](./../public/target-by-category.png)
 
 - **Select Categories:** Click inside the box and start typing the name of a category to search. Select one or more categories from the list. The discount will apply to all products within the selected categories (including their sub-categories).
 - **Exclude Items:** This checkbox inverts the logic.
@@ -54,7 +54,7 @@ Let's explore each option in detail.
 
 For both "By Product" and "By Product Category" targeting, you will see an **`Exclude Items`** checkbox. This is a powerful feature that completely inverts the logic of your selection, allowing you to create store-wide discounts with a few specific exceptions.
 
-![The Exclude Items checkbox](./../public/targeting-exclude-items.png)
+<!-- ![The Exclude Items checkbox](./../public/targeting-exclude-items.png) -->
 
 #### Default Behavior (Exclude Items is UNCHECKED)
 
@@ -85,3 +85,9 @@ For both "By Product" and "By Product Category" targeting, you will see an **`Ex
   2.  **Select Categories:** Search for and select the "New Arrivals" category.
   3.  **Exclude Items:** **Check this box.**
 - **Result:** The discount will apply to every product in your store _except_ for those in the "New Arrivals" category.
+
+## Next Steps
+
+With targeting mastered, you can now fine-tune your promotions with even more specific rules.
+
+- **[How to Use Conditions &rarr;](./conditions.md)**

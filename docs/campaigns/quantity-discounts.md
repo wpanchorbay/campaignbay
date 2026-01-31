@@ -10,25 +10,29 @@ This is the perfect campaign type for scenarios like:
 
 This guide will walk you through every field required to set up this campaign type.
 
-## Step 1: Set Core Campaign Details
+## Step 1: Select Your Campaign Type
 
-To begin, navigate to **CampaignBay → Add Campaign**. First, define the campaign's name, its core logic, and its initial state.
+To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Core Campaign Details for Quantity Discount](./../public/quantity-core-details.png)
+![Select Campaign Type](./../public/selection-quantity-based.png)
 
-- **Campaign Title:** Give your campaign a clear and descriptive name. This is essential for identifying it later. Example: `T-Shirt Bulk Discount`.
+- **Select Discount Type:** Choose **`Quantity Based Discount`** from the list. This configures the campaign to apply tiered pricing based on the number of items purchased.
 
-- **Select Discount Type:** From the dropdown menu, choose **`Quantity Based Discount`**. This will reveal the specific fields needed for a tiered pricing campaign.
+![Campaign Title](./../public/common-campaign-title.png)
+
+- **Campaign Title:** Give your campaign a clear and descriptive name (e.g., "T-Shirt Bulk Discount").
+
+![Save Actions](./../public/common-save-actions.png)
 
 - **Select Status:**
   - **Active:** The campaign will be live as soon as its start time is reached.
-  - **Inactive:** The campaign will be saved as a draft and will not run until you manually activate it later.
+  - **Inactive:** The campaign will be saved as a draft.
 
 ## Step 2: Set the Discount Target
 
 This crucial step defines which products in your store are eligible for the quantity discount.
 
-![Discount Target](./../public/scheduled-target.png)
+![Discount Target](./../public/common-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides powerful options to control the scope of your campaign, such as applying it to the entire store, specific products, or categories.
 
@@ -42,22 +46,22 @@ The "Discount Target" setting is a powerful feature shared by all campaign types
 
 This is the core of the Quantity Based Discount. Here you will define the specific pricing levels for your promotion.
 
-![Define Quantity Tiers](./../public/quantity-tiers.png)
+![Define Quantity Tiers](./../public/quantity-tier-single.png)
 
 You can create one or more tiers. Each tier has the following fields:
 
 - **Buy from:** The minimum quantity of an item a customer must have in their cart to qualify for this tier's discount.
 - **to:** The maximum quantity for this tier. **Leave this blank** for the final tier to mean "and up" (e.g., 11 or more).
-- **items, get:** The numeric value of the discount.
-- **% / $ (Mode):** The type of discount to apply.
+- **Items, Get:** The numeric value of the discount.
+- **% / Fixed ($) (Mode):** The type of discount to apply.
   - **Percentage (%):** A percentage discount calculated on the price of each item.
-  - **Currency ($):** A fixed amount deducted from the price of **each individual item**.
+  - **Fixed ($):** A fixed amount deducted from the price of **each individual item**.
 
-::: warning Fixed Amount Logic
-When using a fixed discount (e.g., `$5`), the discount is applied **per item**. If a customer buys 4 items that qualify, they will receive a $5 discount on all 4 items.
-:::
+![Multiple Tiers](./../public/quantity-tiers-multiple.png)
 
 - **+ Add another tier:** Click this to add more pricing levels to your campaign.
+
+![Add Tier Button](./../public/quantity-add-tier-button.png)
 
 ### Example Tier Setup
 
@@ -69,45 +73,21 @@ Here is an example of a multi-level discount for a product:
 
 ## Step 4: Set Conditions (Optional)
 
-This section allows you to define specific rules that must be met for the discount to apply.
+You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Empty](./../public/scheduled-conditions-empty.png)
+![Conditions Overview](./../public/conditions-overview.png)
 
-1.  **Add New Condition:** Click the dropdown to select a condition type. Currently, **User Role** is available.
-
-    ![Conditions Dropdown](./../public/scheduled-conditions-dropdown.png)
-
-2.  **Match Type:** This setting controls how multiple conditions interact with each other.
-
-    - **Match Any:** The discount applies if _at least one_ of the conditions is met.
-
-      - _Example:_ If you set "User Role: Customer" OR "User Role: Subscriber", anyone with either role gets the discount.
-        ![Match Any](./../public/scheduled-conditions-match-any.png)
-
-    - **Match All:** The discount applies only if _all_ defined conditions are met simultaneously.
-      - _Example:_ If you set "User Role: VIP" AND "Cart Total > $100", the user must match both to qualify.
-        ![Match All](./../public/scheduled-conditions-match-all.png)
-
-3.  **Example: Restrict to VIP Users:**
-    In this example, we want to make this campaign exclusive to our "VIP" members.
-
-    - Select **User Role** from the condition dropdown.
-    - Choose **VIP** from the list of roles.
-    - Now, this discount will **only** apply to logged-in users with the **VIP** role. Everyone else (including guests) will see the regular price.
-
-    ![Conditions Full](./../public/scheduled-conditions-full.png)
-
-::: info Future Updates
-We are actively working on adding more condition types such as Cart Total and more. Stay tuned!
-:::
+**[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
 ## Step 5: Set Other Configurations (Optional)
 
 This section provides additional rules for your campaign.
 
-![Other Configurations](./../public/scheduled-other-configs.png)
+![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
+
+![Enable Usage Limit](./../public/sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -115,7 +95,7 @@ This section provides additional rules for your campaign.
 
 For a Scheduled Discount, setting the duration is essential. This section controls when your campaign will automatically start and end.
 
-![Campaign Schedule](./../public/scheduled-schedule.png)
+![Enable Schedule](./../public/sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 
@@ -129,19 +109,27 @@ The status of your campaign is closely tied to the scheduling system, which uses
 **[Read the Full Guide: Scheduling & Automation &rarr;](../core-concepts/scheduling-and-automation.md)**
 :::
 
-## Step 7: Define Display Configurations (Optional)
+## Step 7: Display Configurations
 
-This section allows you to customize how the discount is applied and communicated to the customer in the cart.
+This section controls how the offer is communicated to the customer, both on the product page and in their cart.
 
-![Quantity Display Configurations](./../public/quantity-display-configs.png)
+![Apply Discount As](./../public/quantity-apply-discount-as.png)
 
-- **Apply Discount As:** This setting determines how the final cart discount is presented to the customer.
+- **Apply Discount As:** Choose how the discount is displayed in the cart.
+  - **Strike through in line total:** Shows the original price crossed out with the new quantity price next to it.
 
-  - **Coupon:** Creates a virtual coupon in the cart with a descriptive title.
-  - **Discount:** Applies the discount directly as a line item in the cart totals, labeled as "Discount".
-  - **Strike through in line total:** This option does not apply a coupon or a separate discount line. Instead, it changes the subtotal for the product in the cart, showing the original subtotal crossed out and the new, lower price. This is a very direct way to show the savings.
+- **Cart Page Discount Message Format:** Enter a message to display on the cart page when the discount is applied.
+  - _Example:_ `Quantity discount applied: {discount_amount}`
 
-- **Next Discount Message Format:** Enter a custom message to be displayed on the cart item if the customer is close to unlocking the next discount tier. You can use placeholders like `{remaining_quantity_for_next_offer}` which will be automatically replaced with the number of items needed.
+- **Cart Page Message Location:** Choose where the cart message should appear (e.g., next to the line item name).
+
+![Next Discount Message](./../public/quantity-next-discount-message-format.png)
+
+- **Next Discount Message Format:** Enter a custom message to be displayed on the cart item if the customer is close to unlocking the next discount tier. You can use placeholders like `{remainging_quantity_for_next_offer}`, `{percentage_off}`, and `{amount_off}`.
+
+![Next Discount Message Location](./../public/quantity-next-discount-message-location.png)
+
+- **Cart Page Next Discount Message Location:** Choose where the "next discount" upsell message should appear on the cart page.
 
 ## Step 8: Save the Campaign
 
@@ -149,6 +137,6 @@ Once you have configured all the options, click the **Save Campaign** button at 
 
 ## Next Steps
 
-Next, learn how to create campaigns that create urgency by rewarding your first customers.
+Next, learn how to create campaigns that reward your first customers.
 
 - **[Creating an Early Bird Discount &rarr;](./early-bird-discounts.md)**

@@ -14,25 +14,29 @@ An Early Bird discount is based on the number of **orders**, not the quantity of
 
 This guide will walk you through every field required to set up this campaign type.
 
-## Step 1: Set Core Campaign Details
+## Step 1: Select Your Campaign Type
 
-To begin, navigate to **CampaignBay → Add Campaign**. The first step is to define the campaign's name, its core logic, and its initial state.
+To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Core Campaign Details for Early Bird Discount](./../public/early-bird-core-details.png)
+![Select Campaign Type](./../public/selection-early-bird.png)
 
-- **Campaign Title:** Give your campaign a clear and descriptive name. This is essential for identifying it later. Example: `New Product Launch Offer`.
+- **Select Discount Type:** Choose **`EarlyBird Discount`** from the list. This will reveal the tiered configuration for rewarding your first customers.
 
-- **Select Discount Type:** From the dropdown menu, choose **`EarlyBird Discount`**. This will reveal the specific fields needed for a sales-based tiered campaign.
+![Campaign Title](./../public/common-campaign-title.png)
+
+- **Campaign Title:** Give your campaign a clear and descriptive name (e.g., "New Product Launch Offer").
+
+![Save Actions](./../public/common-save-actions.png)
 
 - **Select Status:**
-  - **Active:** Choose this if you want the campaign to be live on your site (either immediately or on a future schedule).
-  - **Inactive:** Choose this to save the campaign as a draft.
+  - **Active:** The campaign will be live immediately (or on its scheduled start time).
+  - **Inactive:** Save the campaign as a draft.
 
 ## Step 2: Set the Discount Target
 
 This crucial step defines which products in your store are eligible for the early bird discount.
 
-![Discount Target](./../public/scheduled-target.png)
+![Discount Target](./../public/common-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides powerful options to control the scope of your campaign, such as applying it to the entire store, specific products, or categories.
 
@@ -46,13 +50,16 @@ The "Discount Target" setting is a powerful feature shared by all campaign types
 
 This is the core of the Early Bird Discount. Here you will define the tiers based on the number of successful orders.
 
-![Define Early Bird Tiers](./../public/early-bird-tiers.png)
+![Define Early Bird Tiers](./../public/early-bird-tier-single.png)
 
-- **For First:** This defines the range of sales for this tier. The system automatically handles the ranges based on the order of your tiers.
-- **Sales (e.g., 1 - 10):** Enter the upper limit of sales for this tier. For example, entering `10` here means this tier applies to the first 10 sales.
-- **give:** The numeric value of the discount.
-- **% / $ (Mode):** The type of discount to apply (Percentage or Fixed Currency amount).
-- **+ Add another tier:** Click this to add multiple levels of Early Bird offers.
+- **For First:** Enter the number of orders for this tier. For example, entering `10` here means this tier applies to the first 10 successful orders.
+- **Orders (e.g., 1 - 10):** This label automatically updates to show the range of orders covered by this tier.
+- **Get:** The numeric value of the discount.
+- **% / Fixed ($) (Mode):** The type of discount to apply (Percentage or Fixed Currency amount).
+
+![Multiple Tiers](./../public/early-bird-tiers-multiple.png)
+
+- **+ Add another tier:** Click this to add multiple levels of Early Bird offers (e.g., "For Next 10 Orders..."). Each subsequent tier will automatically pick up where the previous one left off.
 
 ### How Tiers Work
 
@@ -71,45 +78,21 @@ The tiers work sequentially from top to bottom.
 
 ## Step 4: Set Conditions (Optional)
 
-This section allows you to define specific rules that must be met for the discount to apply.
+You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Empty](./../public/scheduled-conditions-empty.png)
+![Conditions Overview](./../public/conditions-overview.png)
 
-1.  **Add New Condition:** Click the dropdown to select a condition type. Currently, **User Role** is available.
-
-    ![Conditions Dropdown](./../public/scheduled-conditions-dropdown.png)
-
-2.  **Match Type:** This setting controls how multiple conditions interact with each other.
-
-    - **Match Any:** The discount applies if _at least one_ of the conditions is met.
-
-      - _Example:_ If you set "User Role: Customer" OR "User Role: Subscriber", anyone with either role gets the discount.
-        ![Match Any](./../public/scheduled-conditions-match-any.png)
-
-    - **Match All:** The discount applies only if _all_ defined conditions are met simultaneously.
-      - _Example:_ If you set "User Role: VIP" AND "Cart Total > $100", the user must match both to qualify.
-        ![Match All](./../public/scheduled-conditions-match-all.png)
-
-3.  **Example: Restrict to VIP Users:**
-    In this example, we want to make this campaign exclusive to our "VIP" members.
-
-    - Select **User Role** from the condition dropdown.
-    - Choose **VIP** from the list of roles.
-    - Now, this discount will **only** apply to logged-in users with the **VIP** role. Everyone else (including guests) will see the regular price.
-
-    ![Conditions Full](./../public/scheduled-conditions-full.png)
-
-::: info Future Updates
-We are actively working on adding more condition types such as Cart Total and more. Stay tuned!
-:::
+**[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
 ## Step 5: Set Other Configurations (Optional)
 
 This section provides additional rules for your campaign.
 
-![Other Configurations](./../public/scheduled-other-configs.png)
+![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
+
+![Enable Usage Limit](./../public/sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -117,7 +100,7 @@ This section provides additional rules for your campaign.
 
 For a Scheduled Discount, setting the duration is essential. This section controls when your campaign will automatically start and end.
 
-![Campaign Schedule](./../public/scheduled-schedule.png)
+![Enable Schedule](./../public/sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 
@@ -131,15 +114,23 @@ The status of your campaign is closely tied to the scheduling system, which uses
 **[Read the Full Guide: Scheduling & Automation &rarr;](../core-concepts/scheduling-and-automation.md)**
 :::
 
-## Step 7: Define Display Configurations (Optional)
+## Step 7: Display Configurations
 
-This section allows you to customize how the discount is communicated to the customer on the product page.
+This section controls how the offer is communicated to the customer, both on the product page and in their cart.
 
-![Display Configurations](./../public/scheduled-display-configs.png)
+![Show Promotional Message](./../public/common-show-product-promo-message.png)
 
-- **Display As Regular Price:** This setting is for display purposes only. It changes the visual price on the product page.
+- **Show Product Page Promotional Message:** Toggle this to enable or disable the custom message on the product pages.
 
-- **Discount Message Format:** Enter a custom message to be displayed on the product page when this discount is active. You can use placeholders like `{percentage_off}` and `{amount_off}`.
+![Product Page Promotional Message Format](./../public/common-product-discount-message-format.png)
+
+- **Product Page Discount Message Format:** Customize the promotional text using placeholders like `{percentage_off}` or `{amount_off}`.
+  - _Example:_ `Early Bird Special! Get {percentage_off}% off for a limited time!`
+
+- **Cart Page Discount Message Format:** Enter a message to display on the cart page when the discount is applied.
+  - _Example:_ `Early Bird discount applied: {discount_amount}`
+
+- **Cart Page Message Location:** Choose where the cart message should appear (e.g., next to the line item name).
 
 ## Step 8: Save the Campaign
 

@@ -151,17 +151,29 @@ export default defineConfig({
               { text: 'Quantity Discounts', link: '/campaigns/quantity-discounts' },
               { text: 'Early Bird Discounts', link: '/campaigns/early-bird-discounts' },
               { text: 'BOGO Discounts', link: '/campaigns/bogo-discounts' },
+              { text: 'BOGO Advanced', link: '/campaigns/bogo-advanced-discounts' },
+              { text: 'Product In Cart', link: '/campaigns/product-in-cart-discounts' },
             ]
           }
         ]
       },
-      { text: 'Settings', link: '/settings' },
+      {
+        text: 'Settings',
+        items: [
+          { text: 'Overview', link: '/settings/' },
+          { text: 'Global Settings', link: '/settings/global-settings' },
+          { text: 'Product Settings', link: '/settings/product-settings' },
+          { text: 'Cart Settings', link: '/settings/cart-settings' },
+          { text: 'Advanced Settings', link: '/settings/advanced-settings' },
+        ]
+      },
 
       {
         text: 'Core Concepts',
         items: [
           { text: 'The Discount Engine', link: '/core-concepts/understanding-the-engine' },
           { text: 'Scheduling & Automation', link: '/core-concepts/scheduling-and-automation' },
+          { text: 'How to Use Conditions', link: '/core-concepts/conditions' },
           { text: 'Targeting', link: '/core-concepts/targeting' },
         ]
       },

@@ -9,25 +9,29 @@ This is the perfect campaign type for scenarios like:
 
 This guide will walk you through every field required to set up this campaign type.
 
-## Step 1: Set Core Campaign Details
+## Step 1: Select Your Campaign Type
 
-To begin, navigate to **CampaignBay → Add Campaign**. First, define the campaign's name, its core logic, and its initial state.
+To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Core Campaign Details for BOGO Discount](./../public/bogo-core-details.png)
+![Select BOGO Standard](./../public/selection-bogo-standard.png)
 
-- **Campaign Title:** Give your campaign a clear and descriptive name. Example: `Hoodie BOGO Deal`.
+- **Select Discount Type:** Choose **`Buy X Get X`** from the list. This will reveal the configuration fields for the standard BOGO offer, where the "Buy" item and the "Get" item are the same.
 
-- **Select Discount Type:** From the dropdown menu, choose **`Buy X Get X`**. This will reveal the specific fields for this BOGO campaign.
+![Campaign Title](./../public/common-campaign-title.png)
+
+- **Campaign Title:** Give your campaign a clear and descriptive name (e.g., "Hoodie BOGO Deal").
+
+![Save Actions](./../public/common-save-actions.png)
 
 - **Select Status:**
   - **Active:** The campaign will be live as soon as its start time is reached.
-  - **Inactive:** The campaign will be saved as a draft and will not run until you manually activate it.
+  - **Inactive:** The campaign will be saved as a draft.
 
 ## Step 2: Set the Discount Target
 
 This crucial step defines which products in your store are eligible for the BOGO offer.
 
-![Discount Target](./../public/scheduled-target.png)
+![Discount Target](./../public/common-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides options to apply the offer to your entire store, specific products, or categories.
 
@@ -39,62 +43,34 @@ The "Discount Target" setting is a powerful feature shared by all campaign types
 
 ## Step 3: Define the BOGO Rule
 
-This is the core of the "Buy X Get X" campaign. You define the quantities required for the deal.
+This is the core logic of your campaign.
 
-![Define the BOGO Rule](./../public/bogo-rule.png)
+![BOGO Rule Setup](./../public/bogo-rule-setup.png)
 
-- **Buy Amount:** Enter the number of items a customer must purchase to qualify for the offer.
-- **Get Quantity:** Enter the number of items the customer will receive for free.
+- **Buy X pieces:** Enter the number of items the customer needs to purchase to trigger the offer (e.g., `2`).
+- **Get Y pieces:** Enter the number of items the customer will receive for free (e.g., `1`).
 
-**Example:**
-To create a "Buy 2, Get 1 Free" offer, you would set:
-
-- **Buy Amount:** `2`
-- **Get Quantity:** `1`
-
-A customer would need to add 3 of the same item to their cart to receive the 3rd one for free.
+::: tip How it works
+If you set **Buy 2 Get 1**, and a customer adds 3 items to their cart, the cheapest one will be free. If they add 6 items, the 2 cheapest ones will be free.
+:::
 
 ## Step 4: Set Conditions (Optional)
 
-This section allows you to define specific rules that must be met for the discount to apply.
+You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Empty](./../public/scheduled-conditions-empty.png)
+![Conditions Overview](./../public/conditions-overview.png)
 
-1.  **Add New Condition:** Click the dropdown to select a condition type. Currently, **User Role** is available.
-
-    ![Conditions Dropdown](./../public/scheduled-conditions-dropdown.png)
-
-2.  **Match Type:** This setting controls how multiple conditions interact with each other.
-
-    - **Match Any:** The discount applies if _at least one_ of the conditions is met.
-
-      - _Example:_ If you set "User Role: Customer" OR "User Role: Subscriber", anyone with either role gets the discount.
-        ![Match Any](./../public/scheduled-conditions-match-any.png)
-
-    - **Match All:** The discount applies only if _all_ defined conditions are met simultaneously.
-      - _Example:_ If you set "User Role: VIP" AND "Cart Total > $100", the user must match both to qualify.
-        ![Match All](./../public/scheduled-conditions-match-all.png)
-
-3.  **Example: Restrict to VIP Users:**
-    In this example, we want to make this campaign exclusive to our "VIP" members.
-
-    - Select **User Role** from the condition dropdown.
-    - Choose **VIP** from the list of roles.
-    - Now, this discount will **only** apply to logged-in users with the **VIP** role. Everyone else (including guests) will see the regular price.
-
-    ![Conditions Full](./../public/scheduled-conditions-full.png)
-
-::: info Future Updates
-We are actively working on adding more condition types such as Cart Total and more. Stay tuned!
-:::
+**[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
 ## Step 5: Set Other Configurations (Optional)
 
 This section provides additional rules for your campaign.
 
-![Other Configurations](./../public/scheduled-other-configs.png)
+![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
+
+![Enable Usage Limit](./../public/sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -102,7 +78,7 @@ This section provides additional rules for your campaign.
 
 For a Scheduled Discount, setting the duration is essential. This section controls when your campaign will automatically start and end.
 
-![Campaign Schedule](./../public/scheduled-schedule.png)
+![Enable Schedule](./../public/sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 
@@ -120,20 +96,27 @@ The status of your campaign is closely tied to the scheduling system, which uses
 
 This section is unique to BOGO campaigns and controls how the offer is communicated and applied.
 
-![BOGO Display Configurations](./../public/bogo-display-configs.png)
-
 - **Automatically Add Free Product To Cart:** This is a powerful user experience feature.
-
   - **If checked:** When a customer adds the "Buy Amount" (e.g., 2 items), the free "Get Quantity" (e.g., 1 item) will be **automatically added to their cart at no cost**.
   - **If unchecked:** The customer must manually add the total quantity to their cart (e.g., 3 items). The plugin will then automatically apply a discount equal to the price of the "Get Quantity" (1 item).
 
-- **Product Page Discount Message Format:** Enter a message to display on the product page. Use placeholders like `{buy_quantity}` and `{get_quantity}` to make it dynamic.
+### Messaging Options
 
+![Show Promo Message](./../public/bogo-show-product-message.png)
+
+- **Show BOGO Promotional Message at product page:** Toggle this to enable or disable the custom message on the product page.
+
+![Product Page Message](./../public/bogo-product-message-format.png)
+
+- **Product Page Discount Message Format:** Enter a message to display on the product page. Use placeholders like `{buy_quantity}` and `{get_quantity}`.
   - _Example:_ `Buy {buy_quantity} and get {get_quantity} free!`
 
-- **Cart Page Discount Message Format:** Enter a message to display in the cart. Use `{title}` to show the campaign name.
+![Cart Page Message](./../public/bogo-cart-message-format.png)
 
+- **Cart Page Discount Message Format:** Enter a message to display in the cart. Use `{title}` to show the campaign name.
   - _Example:_ `Discount '{title}' has been applied!`
+
+![Cart Message Location](./../public/bogo-cart-message-location.png)
 
 - **Cart Page Message Location:** Choose where the cart message should appear (e.g., next to the line item name).
 
@@ -141,8 +124,6 @@ This section is unique to BOGO campaigns and controls how the offer is communica
 
 Once you have configured all the options, click the **Save Campaign** button. You will be redirected to the "All Campaigns" list where you can see your new BOGO offer.
 
-## Next Steps
+Next, learn how to create advanced BOGO deals where product X gives product Y.
 
-You have now learned about the main campaign types. It's time to explore the global settings that control your entire discount system.
-
-- **[Configuring the Settings &rarr;](../settings.md)**
+- **[BOGO Advanced (Buy X Get Y) &rarr;](./bogo-advanced-discounts.md)**
