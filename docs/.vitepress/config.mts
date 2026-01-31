@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // base: '/1.0.7/',
+  base: '/1.0.0-PRO/',
   title: "CampaignBay Documentation",
   description: "Comprehensive documentation for CampaignBay - Advanced WooCommerce Discount Campaigns",
 
