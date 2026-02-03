@@ -12,9 +12,12 @@ hero:
     - theme: brand
       text: Get Started
       link: /installation
-    # - theme: alt
-    #   text: View All Features
-    #   link: /core-concepts/understanding-the-engine
+    - theme: alt
+      text: Buy Pro
+      link: https://wpanchorbay.com/campaignbay
+    - theme: alt
+      text: Free Download
+      link: https://wordpress.org/plugins/campaignbay/
 ---
 
 ## What is CampaignBay?
@@ -29,14 +32,52 @@ This documentation will guide you through every feature, from installing the plu
 
 ## Key Features
 
-- **Multiple Campaign Types:** Create classic **Scheduled Sales**, tiered **Quantity Discounts**, urgency-driven **Early Bird** offers, and popular **BOGO (Buy X Get X)** deals.
-- **Advanced Analytics Dashboard:** Get an instant, data-rich overview of your campaign performance. Track total discount value, sales from campaigns, and discounted orders with interactive charts.
-- **Flexible Targeting:** Apply discounts to your entire store, specific products, or categories, with powerful exclusion rules for precise control.
-- **User Role Targeting:** Limit campaigns to specific user roles (e.g., Wholesale Customers, VIPs) using our new Condition engine.
-- **Full Scheduling & Automation:** Set specific start and end dates for your campaigns. Our reliable, automated system handles activation and expiration using a robust WP-Cron and failsafe mechanism.
-- **Intelligent Stacking Logic:** Configure powerful rules for how your discounts interact with each other and with native WooCommerce coupons.
-- **Customizable Display:** Tailor promotional messages on product and cart pages with dynamic placeholders (e.g., `{percentage_off}`, `{buy_quantity}`).
-- **Performance Optimized:** Built with a multi-level caching system to ensure your storefront remains fast and responsive, even with complex rules active.
+**Campaign Types:**
+
+- **Scheduled Discounts:** Run time-limited sales with automatic start and end dates. Perfect for holiday sales or weekly specials.
+- **Quantity Based Discounts:** Tiered pricing like "Buy 3+, get 10% off; Buy 5+, get 20% off." Customers see a pricing table on the product page.
+- **Early Bird Discounts:** Reward the first X customers with special pricing. A live counter shows remaining slots.
+- **BOGO (Buy One Get One):** Classic "Buy 2, Get 1 Free" or "Buy 1, Get 1 at 50% Off" deals. Free items are added directly to the cart.
+
+**Targeting & Conditions:**
+
+- **Flexible Targeting:** Apply discounts to your entire store, specific products, or categories.
+- **Product & Category Exclusions:** Fine-tune which items are excluded from discounts.
+- **User Role Conditions:** Restrict campaigns to Wholesalers, VIPs, or any WordPress role.
+- **Smart Stacking Logic:** Control how discounts interact with each other and native WooCommerce coupons.
+- **Coupon Compatibility:** Works seamlessly with WooCommerce coupons (configurable stacking).
+
+**Display & Messaging:**
+
+- **Customizable Messages:** Dynamic placeholders like `{percentage_off}`, `{buy_quantity}` for promotional text.
+- **Product Page Display:** Discount tables and banners automatically appear on product pages.
+- **Cart Integration:** Automatic discounts with strikethrough pricing in the cart.
+- **Campaign Templates:** Pre-built templates for quick campaign setup.
+
+**Analytics Dashboard:**
+
+- **KPI Cards:** Active Campaigns, Total Discount Value, Discounted Orders, Sales from Campaigns.
+- **Interactive Charts:** Line, bar, and pie chart visualizations for discount trends.
+- **Top Performing Campaigns:** Identify your best campaigns at a glance.
+- **Recent Activity Log:** Track campaign creation and updates.
+- **Live & Upcoming Campaigns:** Quick view of active and scheduled promotions.
+
+**Performance & Automation:**
+
+- **Full Scheduling & Automation:** Reliable WP-Cron based activation/deactivation with failsafe mechanisms.
+- **Performance Optimized:** Multi-level caching keeps your storefront blazingly fast.
+- **100% Free Core Features:** No artificial limits. Create unlimited campaigns.
+
+## Pro Features
+
+Unlock advanced capabilities with [**CampaignBayPro**](https://wpanchorbay.com/campaignbay):
+
+- **BOGO Advanced (Buy X Get Y):** Create cross-sell offers like "Buy a Laptop, Get a Mouse Free" with separate Buy and Get product sets.
+- **Product In Cart Discounts:** Trigger discounts when specific products are in the cart – perfect for accessory upsells.
+- **Advanced Conditions:** Target by Cart Total, Order History, Specific Products in Cart, and more.
+- **Priority Email Support:** Get direct access to our development team.
+
+[**Get CampaignBayPro →**](https://wpanchorbay.com/campaignbay)
 
 ## Live Demo
 
@@ -59,6 +100,8 @@ CampaignBay is designed to help you achieve specific business goals. Here are ju
 - **Create Simple Wholesale Tiers:** Use **Quantity Discounts** on specific product categories to offer wholesale-style pricing to all your customers without needing a separate plugin.
 
 - **Targeted Promotions:** Apply a discount to a specific product category to promote a new line or run a brand-specific sale.
+
+- **Cross-Sell Bundles (Pro):** With [CampaignBayPro](https://wpanchorbay.com/campaignbay), trigger discounts on accessories when customers add specific products to their cart.
 
 ## Getting Started
 

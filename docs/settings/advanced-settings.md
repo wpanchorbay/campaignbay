@@ -16,13 +16,15 @@ The **Advanced Settings** tab contains options for data management and license a
 
 ---
 
-## License Management
+## License Management (CampaignBayPro)
+
+This section is for [**CampaignBayPro**](https://wpanchorbay.com/campaignbay) users only. If you haven't purchased Pro yet, [get it here](https://wpanchorbay.com/campaignbay).
 
 ![License Key](../public/settings-advanced-license.png)
 
 ### License Key
 
-Enter the license key you received upon purchase of CampaignBay Pro.
+Enter the license key you received upon purchase of CampaignBayPro.
 
 ### Activate License
 

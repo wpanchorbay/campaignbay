@@ -96,9 +96,34 @@ If you are troubleshooting an issue, the debug log is the best place to start.
 
 ---
 
+## CampaignBayPro Questions
+
+### How do I upgrade to CampaignBayPro?
+
+Visit [wpanchorbay.com/campaignbay](https://wpanchorbay.com/campaignbay) to purchase a Pro license. After purchase, download the Pro plugin, upload it to your site, and activate your license key in **Settings → Advanced**.
+
+### Do I need the free plugin to use CampaignBayPro?
+
+Yes! CampaignBayPro is an extension that adds advanced features to the free CampaignBay plugin. Both must be installed and active.
+
+### What Pro features are available?
+
+CampaignBayPro includes:
+
+- **BOGO Advanced (Buy X Get Y):** Create cross-sell offers with different buy and get products
+- **Product In Cart Discounts:** Trigger discounts when specific products are in the cart
+- **Advanced Conditions:** Target by Cart Total, Order History, Products in Cart, and more
+- **Priority Email Support:** Direct access to our development team
+
+Learn more at [wpanchorbay.com/campaignbay](https://wpanchorbay.com/campaignbay).
+
+---
+
 ## Next Steps
 
 Now that you've explored the FAQ, you're ready to start building your own campaigns!
 
 - **[Create a Campaign &rarr;](./campaigns/index.md)**
 - **[Back to Dashboard &rarr;](./dashboard.md)**
+
+Need advanced features? **[Get CampaignBayPro &rarr;](https://wpanchorbay.com/campaignbay)**

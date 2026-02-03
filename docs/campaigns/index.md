@@ -119,10 +119,18 @@ Select multiple campaigns using checkboxes, then use the bulk action bar at the 
 
 Now that you know how to manage your campaigns, explore each campaign type:
 
+**Free Campaign Types:**
+
 - **[Scheduled Discounts &rarr;](./scheduled-discounts.md)**
 - **[Quantity Discounts &rarr;](./quantity-discounts.md)**
 - **[Early Bird Discounts &rarr;](./early-bird-discounts.md)**
 - **[BOGO (Buy X Get X) &rarr;](./bogo-discounts.md)**
-- **[BOGO Advanced (Buy X Get Y) &rarr;](./bogo-advanced-discounts.md)**
-- **[Product In Cart &rarr;](./product-in-cart-discounts.md)**
-- **[Conditions &rarr;](../core-concepts/conditions.md)**
+
+**Pro Campaign Types:** ([Get CampaignBayPro](https://wpanchorbay.com/campaignbay))
+
+- **[BOGO Advanced (Buy X Get Y) &rarr;](./bogo-advanced-discounts.md)** – Cross-sell with different buy/get products
+- **[Product In Cart &rarr;](./product-in-cart-discounts.md)** – Trigger discounts based on cart contents
+
+**Conditions:**
+
+- **[Conditions &rarr;](../core-concepts/conditions.md)** – Target by User Role, Cart Total, Order History, and more

@@ -84,4 +84,6 @@ It shows a timestamped list of when campaigns were created or updated, and by wh
 
 Now that you're familiar with the Dashboard, let's dive into the Core Concepts that power the plugin.
 
-- **[Learn about the Discount Engine &rarr;](./core-concepts/understanding-the-engine.md)**```
+- **[Learn about the Discount Engine &rarr;](./core-concepts/understanding-the-engine.md)**
+
+Want more campaign types? **[Upgrade to CampaignBayPro](https://wpanchorbay.com/campaignbay)** for BOGO Advanced, Product In Cart discounts, and Advanced Conditions.

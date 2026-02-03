@@ -1,5 +1,9 @@
 # Campaign Type: BOGO Advanced (Buy X Get Y)
 
+::: tip Pro Feature
+This is a **CampaignBayPro** feature. [Upgrade to Pro](https://wpanchorbay.com/campaignbay) to unlock BOGO Advanced and other powerful features.
+:::
+
 A **BOGO Advanced (Buy X, Get Y)** discount is a powerful upgrade to the standard BOGO campaign. While the standard BOGO requires the customer to buy and get the _same_ product (Buy T-Shirt, Get T-Shirt), the Advanced version deals with _different_ products.
 
 This is perfect for cross-selling and bundling scenarios like:

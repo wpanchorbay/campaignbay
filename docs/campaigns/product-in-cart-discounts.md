@@ -1,5 +1,9 @@
 # Campaign Type: Product In Cart
 
+::: tip Pro Feature
+This is a **CampaignBayPro** feature. [Upgrade to Pro](https://wpanchorbay.com/campaignbay) to unlock Product In Cart discounts and other powerful features.
+:::
+
 The **Product In Cart** campaign is a conditional discount type. It allows you to offer a discount on specific items (or the entire cart) _only if_ a particular "trigger product" is present in the customer's cart.
 
 This is ideal for membership-style perks or "lock and key" offers:
