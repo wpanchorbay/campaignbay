@@ -75,7 +75,7 @@ This section provides additional rules for your campaign.
 
 ## Step 5: Set the Schedule (Optional)
 
-For a Scheduled Discount, setting the duration is essential. This section controls when your campaign will automatically start and end.
+You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
 ![Enable Schedule](./../public/sidebar-schedule-dates.png)
 
