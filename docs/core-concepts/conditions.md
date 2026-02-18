@@ -10,7 +10,7 @@ Every campaign includes a **Conditions** section where you can add one or more r
 
 ### Match Logic
 
-![Match Any / Match All Toggle](../public/conditions-match-toggle.png)
+![Match Any / Match All Toggle](../public/core-conditions-conditions-match-toggle.png)
 
 | Mode          | Behavior                                             |
 | ------------- | ---------------------------------------------------- |
@@ -21,7 +21,7 @@ Every campaign includes a **Conditions** section where you can add one or more r
 
 Click **Add New Condition** to see the available options:
 
-![Conditions Dropdown](../public/conditions-dropdown.png)
+![Conditions Dropdown](../public/core-conditions-conditions-dropdown.png)
 
 ---
 
@@ -31,11 +31,11 @@ Click **Add New Condition** to see the available options:
 
 Restrict the campaign to users with a **single specific** WordPress role.
 
-![User Role Condition](../public/conditions-user-role.png)
+![User Role Condition](../public/core-conditions-conditions-user-role.png)
 
 #### With / Without Toggle
 
-![With Without Dropdown](../public/conditions-with-without.png)
+![With Without Dropdown](../public/core-conditions-conditions-with-without.png)
 
 | Option      | Behavior                                                  |
 | ----------- | --------------------------------------------------------- |
@@ -44,7 +44,7 @@ Restrict the campaign to users with a **single specific** WordPress role.
 
 #### Select User Role
 
-![Role Selection Dropdown](../public/conditions-role-select.png)
+![Role Selection Dropdown](../public/core-conditions-conditions-role-select.png)
 
 Choose from any WordPress role on your site:
 
@@ -62,11 +62,11 @@ Create a "VIP Only" sale: `User Role` → `with` → `VIP Customer`
 
 Restrict the campaign to users with **one of several** WordPress roles.
 
-![User Roles Condition](../public/conditions-user-roles.png)
+![User Roles Condition](../public/core-conditions-conditions-user-roles.png)
 
 #### With / Without Toggle
 
-![User Roles With Without](../public/conditions-user-roles-with-without.png)
+![User Roles With Without](../public/core-conditions-conditions-user-roles-with-without.png)
 
 | Option      | Behavior                                                          |
 | ----------- | ----------------------------------------------------------------- |
@@ -75,7 +75,7 @@ Restrict the campaign to users with **one of several** WordPress roles.
 
 #### Multi-Select Roles
 
-![User Roles Selected](../public/conditions-user-roles-selected.png)
+![User Roles Selected](../public/core-conditions-conditions-user-roles-selected.png)
 
 Select multiple roles — user must have **at least one** of the selected roles.
 
@@ -89,11 +89,11 @@ Create a wholesale discount: `User Roles` → `with` → `Wholesale Buyer, VIP C
 
 Restrict the campaign to **specific individual users** by name or email.
 
-![Users Condition](../public/conditions-users.png)
+![Users Condition](../public/core-conditions-conditions-users.png)
 
 #### Include / Exclude Toggle
 
-![Users Include Exclude](../public/conditions-users-include-exclude.png)
+![Users Include Exclude](../public/core-conditions-conditions-users-include-exclude.png)
 
 | Option      | Behavior                                                   |
 | ----------- | ---------------------------------------------------------- |
@@ -107,7 +107,7 @@ Select multiple users from the dropdown — search by name or email.
 ::: tip Use Case
 Create a personal thank-you discount for top customers: `Users` → `Include` → `john@example.com, jane@example.com`
 :::
-
+<!-- 
 ---
 
 ## Pro Conditions
@@ -156,7 +156,7 @@ Apply discounts when a product from a specific category is in the cart.
 ::: tip Use Case
 Bundle deal: When customer has any item from "Electronics," offer 15% off "Accessories."
 :::
-
+ -->
 [**Upgrade to CampaignBayPro →**](https://wpanchorbay.com/campaignbay)
 
 ---
@@ -166,5 +166,3 @@ Bundle deal: When customer has any item from "Electronics," offer 15% off "Acces
 Now that you know how to apply specific rules to users and roles, learn how to target your discounts to specific products and categories.
 
 - **[Targeting &rarr;](./targeting.md)**
-
-Need more advanced conditions? **[Get CampaignBayPro &rarr;](https://wpanchorbay.com/campaignbay)**

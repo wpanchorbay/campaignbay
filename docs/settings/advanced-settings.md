@@ -34,10 +34,8 @@ Click to validate your key and unlock Pro features. Once activated, your license
 
 If you need to migrate your license to another domain, click **Deactivate License** to release it from the current site before activating on a new one.
 
----
-
 ## Next Steps
 
-Now that you've configured your settings, head to the FAQ for common questions and answers.
+With targeting mastered, you can now fine-tune your promotions with even more specific rules.
 
-- **[FAQ &rarr;](../faq.md)**
+- **[Understanding the Engine &rarr;](../core-concepts/understanding-the-engine.md)**

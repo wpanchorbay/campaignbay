@@ -14,7 +14,7 @@ This guide will walk you through every field required to set up this campaign ty
 
 To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Select Campaign Type](./../public/selection-quantity-based.png)
+![Select Campaign Type](./../public/quantity-selection.png)
 
 - **Select Discount Type:** Choose **`Quantity Based Discount`** from the list. This configures the campaign to apply tiered pricing based on the number of items purchased.
 
@@ -32,7 +32,7 @@ To begin, navigate to **CampaignBay → Add Campaign**.
 
 This crucial step defines which products in your store are eligible for the quantity discount.
 
-![Discount Target](./../public/common-target-settings.png)
+![Discount Target](./../public/quantity-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides powerful options to control the scope of your campaign, such as applying it to the entire store, specific products, or categories.
 
@@ -57,25 +57,25 @@ You can create one or more tiers. Each tier has the following fields:
   - **Percentage (%):** A percentage discount calculated on the price of each item.
   - **Fixed ($):** A fixed amount deducted from the price of **each individual item**.
 
-![Multiple Tiers](./../public/quantity-tiers-multiple.png)
+![Add Tier Button](./../public/quantity-add-tier-button.png)
 
 - **+ Add another tier:** Click this to add more pricing levels to your campaign.
-
-![Add Tier Button](./../public/quantity-add-tier-button.png)
 
 ### Example Tier Setup
 
 Here is an example of a multi-level discount for a product:
 
-- **Tier 1:** Buy from `3` to `5` items, get `10` `%`
-- **Tier 2:** Buy from `6` to `10` items, get `15` `%`
-- **Tier 3:** Buy from `11` to ``items, get`20` `%`
+![Example Tiers](./../public/quantity-tiers-example.png)
+
+- **Tier 1:** Buy from `1` to `10` items, get `10` `%`
+- **Tier 2:** Buy from `11` to `20` items, get `15` `%`
+- **Tier 3:** Buy from `21` to `30` items, get`20` `%`
 
 ## Step 4: Set Conditions (Optional)
 
 You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Overview](./../public/conditions-overview.png)
+![Conditions Overview](./../public/quantity-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
@@ -83,11 +83,11 @@ You can add specific rules to restrict who can use this discount (e.g., specific
 
 This section provides additional rules for your campaign.
 
-![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
+![Exclude Sale Item](./../public/quantity-sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
 
-![Enable Usage Limit](./../public/sidebar-usage-limit.png)
+![Enable Usage Limit](./../public/quantity-sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -95,7 +95,7 @@ This section provides additional rules for your campaign.
 
 You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
-![Enable Schedule](./../public/sidebar-schedule-dates.png)
+![Enable Schedule](./../public/quantity-sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 

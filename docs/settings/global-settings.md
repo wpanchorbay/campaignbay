@@ -6,7 +6,7 @@ The **Global Settings** tab contains the main operational controls for the entir
 
 ### Enable Discount Add-on
 
-![Enable Discount Add-on](../public/settings-enable-discount.png)
+![Enable Discount Add-on](../public/settings-global-enable-discount.png)
 
 This is the master "on/off" switch for CampaignBay.
 
@@ -15,7 +15,7 @@ This is the master "on/off" switch for CampaignBay.
 
 ### Bulk Table Position
 
-![Bulk Table Position](../public/settings-bulk-table-position.png)
+![Bulk Table Position](../public/settings-global-bulk-table-position.png)
 
 Controls where the "Quantity Discount" pricing table appears on product pages.
 
@@ -28,7 +28,7 @@ Controls where the "Quantity Discount" pricing table appears on product pages.
 
 ### Discount Bar Position
 
-![Discount Bar Position](../public/settings-discount-bar-position.png)
+![Discount Bar Position](../public/settings-global-discount-bar-position.png)
 
 Controls where promotional bars (for Scheduled or BOGO discounts) appear on product pages.
 
@@ -41,7 +41,7 @@ Controls where promotional bars (for Scheduled or BOGO discounts) appear on prod
 
 ### Calculate Discount From
 
-![Calculate Discount From](../public/settings-calculate-from.png)
+![Calculate Discount From](../public/settings-global-calculate-from.png)
 
 Determines which price is used as the base for discount calculations.
 
@@ -52,11 +52,11 @@ Determines which price is used as the base for discount calculations.
 
 ### Enable Debug Mode
 
-![Enable Debug Mode](../public/settings-debug-checkbox.png)
+![Enable Debug Mode](../public/settings-global-debug-checkbox.png)
 
 When checked, the plugin logs detailed process information for troubleshooting.
 
-![Debug Mode Enabled](../public/settings-debug-enabled.png)
+![Debug Mode Enabled](../public/settings-global-debug-checkbox.png)
 
 Once enabled, two action buttons appear:
 
@@ -65,7 +65,7 @@ Once enabled, two action buttons appear:
 
 ### Debug Log Viewer
 
-![Debug Log Viewer](../public/settings-log-viewer.png)
+![Debug Log Viewer](../public/settings-global-log-viewer.png)
 
 The log viewer provides:
 

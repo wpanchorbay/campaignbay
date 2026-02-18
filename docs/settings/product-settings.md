@@ -49,7 +49,7 @@ Customize how promotional messages are displayed on product pages for different 
 
 ## Quantity Discounts Table
 
-![Enable Quantity Discounts Table](../public/settings-product-quantity-table.png)
+![Customize Discount Table Modal](../public/settings-product-customize-table-modal.png)
 
 ### Enable Quantity Discounts Table on Product Page
 
@@ -59,7 +59,8 @@ When enabled, a pricing table showing tiered discounts will appear on product pa
 
 Click **Customize Table** to open the configuration modal:
 
-![Customize Discount Table Modal](../public/settings-customize-table-modal.png)
+
+![Quantity Discounts Table Settings](../public/settings-product-quantity-table.png)
 
 | Setting               | Description                                                            |
 | --------------------- | ---------------------------------------------------------------------- |
@@ -72,11 +73,7 @@ The **Preview** section shows a live preview of how the table will appear.
 
 ---
 
-## Product Exclusion & Prioritization
-
-![Product Exclusion & Prioritization](../public/settings-product-exclusion.png)
-
-### Product Page Discount Message Format
+## Product Prioritization
 
 ![Product Priority Dropdown](../public/settings-product-priority-dropdown.png)
 

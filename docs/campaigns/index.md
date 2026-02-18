@@ -6,7 +6,7 @@ The **All Campaigns** page is your central hub for managing and organizing all d
 
 ## Import & Export
 
-![Import Export Buttons](../public/campaigns-import-export.png)
+![Import Export Buttons](../public/campaigns-overview-campaigns-import-export.png)
 
 Quickly migrate or backup your campaigns:
 
@@ -21,7 +21,7 @@ The toolbar provides instant search, filtering, and view switching.
 
 ### Search
 
-![Search Bar](../public/campaigns-search-toolbar.png)
+![Search Bar](../public/campaigns-overview-campaigns-search-toolbar.png)
 
 Start typing a campaign name to instantly filter results.
 
@@ -29,23 +29,23 @@ Start typing a campaign name to instantly filter results.
 
 Click the filter icon to open advanced filtering options:
 
-![Search with Filter](../public/campaigns-search-filter.png)
+![Search with Filter](../public/campaigns-overview-campaigns-search-filter.png)
 
-![Filter Dropdown](../public/campaigns-filter-dropdown.png)
+![Filter Dropdown](../public/campaigns-overview-campaigns-filter-dropdown.png)
 
 Filter by **Status** (Active, Inactive) or **Type** (Scheduled, Quantity, BOGO, etc.).
 
 Active filters appear as removable pills:
 
-![Active Filter Pills](../public/campaigns-filter-pills.png)
+![Active Filter Pills](../public/campaigns-overview-campaigns-filter-pills.png)
 
 The filter icon shows a badge indicating how many filters are active:
 
-![Filter Badge](../public/campaigns-filter-badge.png)
+![Filter Badge](../public/campaigns-overview-campaigns-filter-badge.png)
 
 ### View Toggle & Settings
 
-![Sort Panel](../public/campaigns-sort-panel.png)
+![Sort Panel](../public/campaigns-overview-campaigns-sort-panel.png)
 
 Click the gear icon to access display settings:
 
@@ -60,7 +60,7 @@ Click the gear icon to access display settings:
 
 ## Table View
 
-![Campaigns Table View](../public/campaigns-table-view.png)
+![Campaigns Table View](../public/campaigns-overview-campaigns-table-view.png)
 
 A dense, data-rich list with sortable columns:
 
@@ -77,7 +77,7 @@ A dense, data-rich list with sortable columns:
 
 ### Row Actions
 
-![Row Actions](../public/campaigns-row-actions.png)
+![Row Actions](../public/campaigns-overview-campaigns-row-actions.png)
 
 Click the action icons at the end of each row:
 
@@ -91,7 +91,7 @@ Or hover over / click the three-dot menu (⋮) to reveal the same options.
 
 ## Grid View
 
-![Campaigns Grid View](../public/campaigns-grid-view.png)
+![Campaigns Grid View](../public/campaigns-overview-campaigns-grid-view.png)
 
 A visual, card-based layout showing key information at a glance:
 
@@ -108,7 +108,7 @@ A visual, card-based layout showing key information at a glance:
 
 Select multiple campaigns using checkboxes, then use the bulk action bar at the bottom:
 
-![Bulk Actions Bar](../public/campaigns-bulk-actions.png)
+![Bulk Actions Bar](../public/campaigns-overview-campaigns-bulk-actions.png)
 
 - **Delete** — Remove all selected campaigns
 - **Export** — Download selected as CSV

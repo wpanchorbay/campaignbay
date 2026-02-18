@@ -8,20 +8,20 @@ A **BOGO Advanced (Buy X, Get Y)** discount is a powerful upgrade to the standar
 
 This is perfect for cross-selling and bundling scenarios like:
 
-- "Buy a **Laptop**, Get a **Mouse** for Free"
+- "Buy 3 **Hoodies**, Get a **Simple Mug** for Free"
 - "Buy 2 **Jeans**, Get a **Belt** at 50% Off"
 
 ## Step 1: Select Your Campaign Type
 
 To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Select BOGO Advanced](./../public/selection-bogo-advanced.png)
+![Select BOGO Advanced](./../public/bogo-advanced-selection.png)
 
 - **Select Discount Type:** Choose **`BOGO Advanced`** from the list of available campaign types. This will unlock the specific configuration fields for Buy X Get Y offers.
 
 ![Campaign Title](./../public/common-campaign-title.png)
 
-- **Campaign Title:** Give your campaign a descriptive name (e.g., "Free Mouse with Laptop Bundle"). This name will appear in the "All Campaigns" list and can be used in your cart messages using the `{title}` placeholder.
+- **Campaign Title:** Give your campaign a descriptive name (e.g., "Free Mug with Hoodies Bundle"). This name will appear in the "All Campaigns" list and can be used in your cart messages using the `{title}` placeholder.
 
 ![Save Actions](./../public/common-save-actions.png)
 
@@ -42,22 +42,22 @@ This is where you define the "Buy X Get Y" logic. You can create multiple tiers 
 
 ![BOGO Advanced Tiers Example](./../public/bogo-advanced-tiers-example.png)
 
-### Example: The "Laptop Bundle"
+### Example: The "Hoodie Bundle"
 
-You want to give a free mouse with every laptop purchase.
+You want to give a free Simple Mug with every 3 Hoodies purchased.
 
-- **Buy Product:** Laptop Pro X
-- **Buy Quantity:** 1
-- **Get Product:** Wireless Mouse
+- **Buy Product:** Hoodie
+- **Buy Quantity:** 3
+- **Get Product:** Simple Mug
 - **Get Quantity:** 1
 
-When a customer adds **1 Laptop Pro X** to their cart, the system will automatically add **1 Wireless Mouse** to the cart for free (depending on your display settings).
+When a customer adds **3 Hoodies** to their cart, the system will automatically add **1 Simple Mug** to the cart for free (depending on your display settings).
 
 ## Step 3: Set Conditions (Optional)
 
 You can add specific rules to restrict who can use this discount.
 
-![Conditions Overview](./../public/conditions-overview.png)
+![Conditions Overview](./../public/bogo-advanced-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
@@ -65,11 +65,11 @@ You can add specific rules to restrict who can use this discount.
 
 This section provides additional rules for your campaign.
 
-![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
+![Exclude Sale Item](./../public/bogo-advanced-sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
 
-![Enable Usage Limit](./../public/sidebar-usage-limit.png)
+![Enable Usage Limit](./../public/bogo-advanced-sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -77,7 +77,7 @@ This section provides additional rules for your campaign.
 
 You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
-![Enable Schedule](./../public/sidebar-schedule-dates.png)
+![Enable Schedule](./../public/bogo-advanced-sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 

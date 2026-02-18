@@ -18,7 +18,7 @@ This guide will walk you through every field required to set up this campaign ty
 
 To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Select Campaign Type](./../public/selection-early-bird.png)
+![Select Campaign Type](./../public/early-bird-selection.png)
 
 - **Select Discount Type:** Choose **`EarlyBird Discount`** from the list. This will reveal the tiered configuration for rewarding your first customers.
 
@@ -36,7 +36,7 @@ To begin, navigate to **CampaignBay → Add Campaign**.
 
 This crucial step defines which products in your store are eligible for the early bird discount.
 
-![Discount Target](./../public/common-target-settings.png)
+![Discount Target](./../public/early-bird-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides powerful options to control the scope of your campaign, such as applying it to the entire store, specific products, or categories.
 
@@ -65,10 +65,12 @@ This is the core of the Early Bird Discount. Here you will define the tiers base
 
 The tiers work sequentially from top to bottom.
 
+![Multiple Tiers](./../public/early-bird-tiers-example.png)
+
 **Example Tier Setup:**
 
-- **Tier 1:** For First `Sales (1 - 100)`, give `50` `%`
-- **Tier 2:** For First `Sales (1 - 250)`, give `25` `%`
+- **Tier 1:** For First `100 Sales (1 - 100)`, give `50` `%`
+- **Tier 2:** For Next `150 Sales (101 - 250)`, give `25` `%`
 
 **In this scenario:**
 
@@ -80,7 +82,7 @@ The tiers work sequentially from top to bottom.
 
 You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Overview](./../public/conditions-overview.png)
+![Conditions Overview](./../public/early-bird-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
@@ -88,11 +90,11 @@ You can add specific rules to restrict who can use this discount (e.g., specific
 
 This section provides additional rules for your campaign.
 
-![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
+![Exclude Sale Item](./../public/early-bird-sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
 
-![Enable Usage Limit](./../public/sidebar-usage-limit.png)
+![Enable Usage Limit](./../public/early-bird-sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -100,7 +102,7 @@ This section provides additional rules for your campaign.
 
 You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
-![Enable Schedule](./../public/sidebar-schedule-dates.png)
+![Enable Schedule](./../public/early-bird-sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 
@@ -118,11 +120,11 @@ The status of your campaign is closely tied to the scheduling system, which uses
 
 This section controls how the offer is communicated to the customer, both on the product page and in their cart.
 
-![Show Promotional Message](./../public/common-show-product-promo-message.png)
+![Show Promotional Message](./../public/early-bird-show-product-promo-message.png)
 
 - **Show Product Page Promotional Message:** Toggle this to enable or disable the custom message on the product pages.
 
-![Product Page Promotional Message Format](./../public/common-product-discount-message-format.png)
+![Product Page Promotional Message Format](./../public/early-bird-product-discount-message-format.png)
 
 - **Product Page Discount Message Format:** Customize the promotional text using placeholders like `{percentage_off}` or `{amount_off}`.
   - _Example:_ `Early Bird Special! Get {percentage_off}% off for a limited time!`

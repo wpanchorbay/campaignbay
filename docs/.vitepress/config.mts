@@ -39,53 +39,37 @@ export default defineConfig({
         max-height: 90vh;
         z-index: 1000;
       }
+
+      .medium-zoom-image {
+        border-radius: 8px;
+      }
+
     `],
     ['script', {}, `
       document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOMContentLoaded is defined');
-        if (typeof mediumZoom !== 'undefined') {
-          console.log('mediumZoom is defined');
-          mediumZoom('img', {
-            background: 'var(--vp-c-bg)',
-            scrollOffset: 0,
-            margin: 24
+        const initZoom = () => {
+          if (typeof mediumZoom !== 'undefined') {
+            mediumZoom('img', {
+              background: 'var(--vp-c-bg)',
+              scrollOffset: 0,
+              margin: 24
+            });
+          }
+        };
+
+        initZoom();
+
+        if (typeof window !== 'undefined') {
+          let currentPath = window.location.pathname;
+          const observer = new MutationObserver(function() {
+            if (window.location.pathname !== currentPath) {
+              currentPath = window.location.pathname;
+              setTimeout(initZoom, 500);
+            }
           });
-        } else {
-          console.log('mediumZoom is not defined');
+          observer.observe(document.body, { childList: true, subtree: true });
         }
       });
-      
-      // Re-initialize on route changes
-      if (typeof window !== 'undefined') {
-        console.log('window is defined');
-        let currentPath = window.location.pathname;
-        const observer = new MutationObserver(function() {
-          console.log('observer is defined');
-          if (window.location.pathname !== currentPath) {
-            console.log('window.location.pathname is defined: ', window.location.pathname);
-            currentPath = window.location.pathname;
-            setTimeout(function() {
-              if (typeof mediumZoom !== 'undefined') {
-                mediumZoom('img', {
-                  background: 'var(--vp-c-bg)',
-                  scrollOffset: 0,
-                  margin: 24
-                });
-              }
-            }, 100);
-          } else {
-            console.log('window.location.pathname is not defined');
-          }
-        });
-        
-        observer.observe(document.body, {
-          childList: true,
-          subtree: true
-        });
-      } 
-        else {
-        console.log('window is not defined');
-      }
     `]
   ],
 
@@ -122,7 +106,7 @@ export default defineConfig({
 
     // Enhanced navigation
     nav: [
-      { text: 'Home', link: '/' },
+      { text: 'Get PRO', link: 'https://wpanchorbay.com/campaignbay' },
       { text: 'Getting Started', link: '/installation' },
       {
         text: 'Version',

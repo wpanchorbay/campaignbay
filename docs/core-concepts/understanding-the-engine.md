@@ -23,7 +23,7 @@ What happens if a product is eligible for both a "20% Off Store-Wide" (`Schedule
 
 The engine first finds the single best discount from the **Product-Level group**. This is controlled by the **"Handle Multiple Product Discounts"** setting, found in **Settings → Product Settings**.
 
-<!-- ![Conflict Resolution Setting](./../public/settings-conflict-resolution.png) -->
+![Conflict Resolution Setting](./../public/settings-product-priority-dropdown.png)
 
 - **Apply Highest Discount (Default):** The engine calculates the final price for all applicable `Scheduled` and `Early Bird` campaigns and applies **only the one that gives the customer the biggest saving**. In the example above, the 50% Early Bird discount would win.
 
@@ -35,7 +35,7 @@ At the end of this step, the engine has determined the single "best" product-lev
 
 Next, the engine decides how to handle the winning Product-Level discount and any applicable Cart-Level discounts. This is controlled by the **`Allow Stacking with Other Discount Campaigns`** setting in the **Settings → Cart Settings** tab.
 
-<!-- ![Cart Stacking Options](./../public/settings-cart-stacking.png) -->
+![Cart Stacking Options](./../public/settings-cart-stacking-campaigns.png)
 
 #### If Stacking is OFF (Default)
 

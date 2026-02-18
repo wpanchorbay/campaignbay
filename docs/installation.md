@@ -2,6 +2,10 @@
 
 Welcome to CampaignBay! This guide will walk you through installing both the free CampaignBay plugin and the optional CampaignBayPro extension.
 
+::: info Documentation Version
+This documentation is valid for **CampaignBay 1.1.1** or higher and **CampaignBayPro 1.0.0** and higher.
+:::
+
 ## Requirements
 
 Before you begin, please ensure your WordPress environment meets the following minimum requirements:
@@ -96,7 +100,7 @@ CampaignBay is an add-on for WooCommerce and cannot run without it. Please ensur
 
 ### CampaignBay is not active (Pro only)
 
-CampaignBayPro requires the free CampaignBay plugin (version 1.1.0 or higher) to be installed and active. If you see a warning message, please update or activate the free plugin first.
+CampaignBayPro requires the free CampaignBay plugin (version 1.1.1 or higher) to be installed and active. If you see a warning message, please update or activate the free plugin first.
 
 ### License activation failed (Pro only)
 

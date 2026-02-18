@@ -13,7 +13,7 @@ This guide will walk you through every field required to set up this campaign ty
 
 To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Select BOGO Standard](./../public/selection-bogo-standard.png)
+![Select BOGO Standard](./../public/bogo-selection.png)
 
 - **Select Discount Type:** Choose **`Buy X Get X`** from the list. This will reveal the configuration fields for the standard BOGO offer, where the "Buy" item and the "Get" item are the same.
 
@@ -31,7 +31,7 @@ To begin, navigate to **CampaignBay → Add Campaign**.
 
 This crucial step defines which products in your store are eligible for the BOGO offer.
 
-![Discount Target](./../public/common-target-settings.png)
+![Discount Target](./../public/bogo-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides options to apply the offer to your entire store, specific products, or categories.
 
@@ -51,14 +51,14 @@ This is the core logic of your campaign.
 - **Get Y pieces:** Enter the number of items the customer will receive for free (e.g., `1`).
 
 ::: tip How it works
-If you set **Buy 2 Get 1**, and a customer adds 3 items to their cart, the cheapest one will be free. If they add 6 items, the 2 cheapest ones will be free.
+If you set **Buy 2 Get 1** on a Hoodie, and a customer adds 2 Hoodies to their cart, 1 free Hoodie will be automatically added to the cart. If they add 4 Hoodies, 2 free Hoodies will be added.
 :::
 
 ## Step 4: Set Conditions (Optional)
 
 You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Overview](./../public/conditions-overview.png)
+![Conditions Overview](./../public/bogo-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
@@ -66,11 +66,11 @@ You can add specific rules to restrict who can use this discount (e.g., specific
 
 This section provides additional rules for your campaign.
 
-![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
+![Exclude Sale Item](./../public/bogo-sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
 
-![Enable Usage Limit](./../public/sidebar-usage-limit.png)
+![Enable Usage Limit](./../public/bogo-sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -78,7 +78,7 @@ This section provides additional rules for your campaign.
 
 You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
-![Enable Schedule](./../public/sidebar-schedule-dates.png)
+![Enable Schedule](./../public/bogo-sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 

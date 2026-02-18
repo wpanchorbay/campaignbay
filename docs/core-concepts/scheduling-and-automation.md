@@ -8,7 +8,7 @@ This guide explains how the automation engine works.
 
 The automation in CampaignBay is entirely controlled by the **Enable Schedule** checkbox and the associated **Start Time** and **End Time** fields found in the campaign sidebar.
 
-![Enable Schedule](../public/sidebar-schedule-dates.png)
+![Enable Schedule](../public/scheduled-sidebar-schedule-dates.png)
 
 ### The Two States
 

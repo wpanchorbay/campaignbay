@@ -15,7 +15,7 @@ This is ideal for membership-style perks or "lock and key" offers:
 
 To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Select Campaign Type](./../public/selection-product-in-cart.png)
+![Select Campaign Type](./../public/product-in-cart-selection.png)
 
 - **Select Discount Type:** Choose **`Product In Cart`** from the list. This unlocks the conditional logic fields for trigger-based discounts.
 
@@ -38,6 +38,8 @@ This campaign relies on a simple "If This, Then That" logic. You define which pr
 ### 1. The Trigger (If product...)
 
 Select the **trigger product**. This is the item that must be in the customer's cart for the discount to activate.
+
+![Trigger Product](./../public/product-in-cart-trigger-product.png)
 
 - **Select a Product:** Search for and select the item (e.g., "VIP Membership").
 
@@ -68,7 +70,7 @@ If you chose **Specific Products**, search for and select the eligible items in 
 
 You can add specific rules to restrict who can use this discount.
 
-![Conditions Overview](./../public/conditions-overview.png)
+![Conditions Overview](./../public/product-in-cart-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
@@ -76,11 +78,11 @@ You can add specific rules to restrict who can use this discount.
 
 This section provides additional rules for your campaign.
 
-![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
+![Exclude Sale Item](./../public/product-in-cart-sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
 
-![Enable Usage Limit](./../public/sidebar-usage-limit.png)
+![Enable Usage Limit](./../public/product-in-cart-sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -88,7 +90,7 @@ This section provides additional rules for your campaign.
 
 You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
-![Enable Schedule](./../public/sidebar-schedule-dates.png)
+![Enable Schedule](./../public/product-in-cart-sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 

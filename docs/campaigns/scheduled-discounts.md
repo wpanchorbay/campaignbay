@@ -14,7 +14,7 @@ This guide will walk you through creating a Scheduled Discount step by step.
 
 To begin, navigate to **CampaignBay → Add Campaign**.
 
-![Select Campaign Type](./../public/selection-scheduled.png)
+![Select Campaign Type](./../public/scheduled-selection.png)
 
 - **Select Discount Type:** Choose **`Scheduled Discount`** from the list. This configures the campaign to apply a simple, direct price reduction.
 
@@ -36,7 +36,7 @@ For scheduled campaigns, set the Status to **Active** and enable the schedule. T
 
 This crucial step defines which products in your store are eligible for the discount.
 
-![Discount Target](./../public/common-target-settings.png)
+![Discount Target](./../public/scheduled-target-settings.png)
 
 The **DISCOUNT TARGET** dropdown provides powerful options to control the scope of your campaign, such as applying it to the entire store, specific products, or categories.
 
@@ -66,7 +66,7 @@ This is where you set the actual discount amount the customer will receive.
 
 You can add specific rules to restrict who can use this discount (e.g., specific User Roles).
 
-![Conditions Overview](./../public/conditions-overview.png)
+![Conditions Overview](./../public/scheduled-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
 
@@ -74,11 +74,11 @@ You can add specific rules to restrict who can use this discount (e.g., specific
 
 This section provides additional rules for your campaign.
 
-![Exclude Sale Item](./../public/sidebar-exclude-sale-item.png)
+![Exclude Sale Item](./../public/scheduled-sidebar-exclude-sale-item.png)
 
 - **Exclude Sale Items:** Check this box if you do not want this campaign's discount to apply to products that are already on sale in WooCommerce. This is useful for preventing "double discounting."
 
-![Enable Usage Limit](./../public/sidebar-usage-limit.png)
+![Enable Usage Limit](./../public/scheduled-sidebar-usage-limit.png)
 
 - **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
 
@@ -86,7 +86,7 @@ This section provides additional rules for your campaign.
 
 You can optionally schedule your campaign to run during a specific time window. This section controls when your campaign will automatically start and end.
 
-![Enable Schedule](./../public/sidebar-schedule-dates.png)
+![Enable Schedule](./../public/scheduled-sidebar-schedule-dates.png)
 
 - **Start Time / End Time:** Use the date and time pickers to set the exact moment for the campaign to activate and expire.
 
@@ -108,11 +108,11 @@ This section controls how the offer is communicated to the customer, both on the
 
 - **Display as Regular Price:** If checked, the discounted price will be shown as the regular price on the product page, rather than showing a "sale" price with a strikethrough.
 
-![Show Promotional Message](./../public/common-show-product-promo-message.png)
+![Show Promotional Message](./../public/scheduled-show-product-promo-message.png)
 
 - **Show Product Page Promotional Message:** Toggle this to enable or disable the custom message on the product pages.
 
-![Product Page Promotional Message Format](./../public/common-product-discount-message-format.png)
+![Product Page Promotional Message Format](./../public/scheduled-product-discount-message-format.png)
 
 - **Product Page Discount Message Format:** Customize the promotional text using placeholders like `{percentage_off}` or `{amount_off}`.
   - _Example:_ `Flash Sale! Get {percentage_off}% off today!`
