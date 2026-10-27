@@ -52,6 +52,12 @@ This is the core logic of your campaign.
 
 ::: tip How it works
 If you set **Buy 2 Get 1** on a Hoodie, and a customer adds 2 Hoodies to their cart, 1 free Hoodie will be automatically added to the cart. If they add 4 Hoodies, 2 free Hoodies will be added.
+
+The number of free items is `floor(quantity / Buy) x Get`. For **Buy 2 Get 1**: quantity 1 gives 0 free, 2 and 3 give 1, 4 and 5 give 2, 6 gives 3, 9 gives 4. The customer pays only for the items they added.
+:::
+
+::: info Free items are their own cart line
+The free items appear as a **separate cart line** at `0.00`, not as extra quantity on the paid line. The customer cannot change or remove the free line (it is rebuilt automatically), and removing the paid line removes the free line too. Several BOGO campaigns each show their own free line and their own message. Stock is checked and reduced for paid and free units together.
 :::
 
 ## Step 4: Set Conditions (Optional)
@@ -61,6 +67,10 @@ You can add specific rules to restrict who can use this discount (e.g., specific
 ![Conditions Overview](./../public/bogo-conditions-overview.png)
 
 **[Read the Full Guide: How to Use Conditions &rarr;](../core-concepts/conditions.md)**
+
+New in 1.2.0, two more conditions are available in the free plugin: **Guest / Logged-in** (apply the offer only to guests or only to logged-in customers) and **Cart Item Quantity**.
+
+![The Add New Condition dropdown listing the available condition types](./../public/campaign-conditions-dropdown.png)
 
 ## Step 5: Set Other Configurations (Optional)
 
@@ -72,7 +82,7 @@ This section provides additional rules for your campaign.
 
 ![Enable Usage Limit](./../public/bogo-sidebar-usage-limit.png)
 
-- **Enable Usage Limit:** Check this box to set a maximum number of times this campaign can be used across your entire store. Once the limit is reached, the campaign will automatically become inactive.
+- **Enable Usage Limit:** Check this box to set a maximum number of **orders** that can use this campaign across your entire store. A limit of `N` expires the campaign after exactly `N` orders (a limit of `1` expires it after the first order). Only orders that reach **Processing** or **Completed** are counted. If a counted order is later cancelled, refunded or fails, its use is given back and a campaign that had expired because of its limit becomes active again.
 
 ## Step 6: Set the Schedule (Optional)
 
@@ -94,11 +104,9 @@ The status of your campaign is closely tied to the scheduling system, which uses
 
 ## Step 7: Define Display Configurations
 
-This section is unique to BOGO campaigns and controls how the offer is communicated and applied.
+This section controls how the offer is communicated to the customer.
 
-- **Automatically Add Free Product To Cart:** This is a powerful user experience feature.
-  - **If checked:** When a customer adds the "Buy Amount" (e.g., 2 items), the free "Get Quantity" (e.g., 1 item) will be **automatically added to their cart at no cost**.
-  - **If unchecked:** The customer must manually add the total quantity to their cart (e.g., 3 items). The plugin will then automatically apply a discount equal to the price of the "Get Quantity" (1 item).
+The free items are always added to the cart automatically at no cost when the customer reaches the "Buy" quantity, so there is no setting for that in the editor.
 
 ### Messaging Options
 
@@ -113,12 +121,43 @@ This section is unique to BOGO campaigns and controls how the offer is communica
 
 ![Cart Page Message](./../public/bogo-cart-message-format.png)
 
-- **Cart Page Discount Message Format:** Enter a message to display in the cart. Use `{title}` to show the campaign name.
+- **Cart Page Discount Message Format:** Enter a message to display in the cart. Use `{title}` to show the campaign name. Leave it blank for the default ("{title} discount applied.").
   - _Example:_ `Discount '{title}' has been applied!`
 
 ![Cart Message Location](./../public/bogo-cart-message-location.png)
 
-- **Cart Page Message Location:** Choose where the cart message should appear (e.g., next to the line item name).
+- **Cart Page Message Location:** Choose where the cart message should appear: **Line Item Name**, **Notice** or **Don't Show**. Note that **Notice** is not active yet.
+
+The default product page banner is "Buy {buy_quantity} and get {get_quantity} free!". Leave the format blank to use the default.
+
+### Storefront Display: Countdown Timer and Promotion
+
+Every campaign type has a **Storefront display** group at the bottom of the Display Configurations.
+
+![Storefront display settings with the promote text box and placeholder chips](./../public/campaign-storefront-display.png)
+
+- **Show countdown timer:** Shows a live countdown to the campaign's end date. It only appears when the campaign has a **schedule enabled with an end date in the future**. Where it appears (product page, shop and category listings, cart) and what it says is controlled in **Settings → Product Settings → Countdown Timer**. You can also place it anywhere with the `[campaignbay_countdown id="12"]` shortcode.
+- **Promote this campaign:** Tick this to let the campaign advertise itself on category pages and through the promotion blurb. Optionally type a **Promotion text**; leave it blank to use the default. You can use `{campaign_title}`, `{end_date}` and `{discount}` in the text.
+
+::: info Learn More
+The wording, colours and locations of the countdown timer, sale badge, category and shop offer messages and promotion blurbs are global settings. See the [Product Settings guide](../settings/product-settings.md).
+:::
+
+### Limit Purchase Quantity (Optional)
+
+![Limit purchase quantity fields for minimum, maximum and step](./../public/campaign-limit-purchase-quantity.png)
+
+Tick **Limit purchase quantity** to set a **Minimum quantity**, **Maximum quantity** and **Quantity step** for the products this campaign targets, while the campaign is active.
+
+- Leave a field empty for no limit. Each field has a minimum value of `1`.
+- Quantities must be a multiple of the step. For example, minimum `5`, maximum `20`, step `5` allows only 5, 10, 15 or 20.
+- Customers see a note on the product page such as "Purchase limits: minimum 5, maximum 20, multiples of 5", and get an error if they try to add or keep a quantity outside the limits.
+- If a product is covered by more than one campaign with limits, the strictest combination applies.
+- The limits are saved only if at least one of the three fields is filled, the minimum is not above the maximum, and some quantity actually fits the step.
+
+::: warning Not enforced with some conditions
+Limits are not enforced for campaigns that use **Cart Total** or **Cart Item Quantity** conditions.
+:::
 
 ## Step 8: Save the Campaign
 

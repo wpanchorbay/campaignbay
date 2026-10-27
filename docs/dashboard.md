@@ -10,7 +10,12 @@ The header provides the main navigation for the plugin and the primary date filt
 
 - **Navigation:** Quickly jump between the `Dashboard`, `Campaigns` list, and `Settings`.
 - **Add Campaign:** The primary button to start creating a new campaign.
-- **Date Filter:** Choose a time period to analyze your campaign performance. You can select pre-defined ranges like "Last 7 Days" or "Last 30 Days." This filter affects all KPI cards and charts on the page.
+- **Date Filter:** Choose a time period to analyze your campaign performance. The dropdown offers **Last 7 Days**, **30 Days**, **90 Days**, **1 Year** and **Custom Range**. This filter affects all KPI cards and charts on the page.
+
+  - Choosing **Custom Range** shows a **Start date** and an **End date** picker next to the dropdown; the data loads once both dates are set. The two pickers do not allow an end date before the start date.
+  - The 90 Days and 1 Year ranges were added in version 1.2.0.
+
+![Dashboard date filter set to Custom Range with start and end date pickers](./public/dashboard-date-range-custom.png)
 
 ## Key Performance Indicators (KPIs)
 
@@ -23,7 +28,7 @@ These four cards at the top of the page give you the most important metrics for 
 3.  **Discounted Orders:** The total number of unique orders that had at least one CampaignBay discount applied.
 4.  **Sales from Campaigns:** The total revenue from all orders that included a CampaignBay discount.
 
-Each of the financial KPIs includes a green percentage below it, showing the trend compared to the previous equivalent period (e.g., if you select "Last 7 Days," it compares to the 7 days prior).
+Each of the financial KPIs includes a green percentage below it, showing the trend compared to the previous equivalent period (e.g., if you select "Last 7 Days," it compares to the 7 days prior; for a custom range it compares to the same number of days immediately before your start date).
 
 ## Performance Charts
 

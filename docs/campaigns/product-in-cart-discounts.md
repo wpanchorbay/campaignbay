@@ -66,6 +66,28 @@ Choose which products are eligible for the discount once the trigger item is add
 
 If you chose **Specific Products**, search for and select the eligible items in the secondary dropdown.
 
+### 4. Show the discount as
+
+::: tip New in Pro 1.1.0
+Choose how the discount is presented in the cart. The total the shopper pays is the same in all three; only the presentation differs.
+:::
+
+![The Show the discount as selector open with its three options](./../public/product-in-cart-show-discount-as.png)
+
+- **A coupon line in the cart totals** (default): the discount appears like a coupon in the cart totals, with a **[Remove]** link.
+- **A lower price on the item:** the target item's price is reduced and shown crossed out in the cart and mini-cart.
+- **A separate discount line in the cart totals:** the item keeps its price and one negative line, named after the campaign, appears in the totals. It has no Remove link, and there is one line per campaign (all target lines combined).
+
+Example: trigger product E (25.00) and target A (100.00) at 10%, cart E ×1 and A ×2.
+
+| Show the discount as | What the cart shows | Total |
+| --- | --- | --- |
+| A coupon line in the cart totals | A 100.00 each; a coupon row −20.00; subtotal 225.00 | 205.00 |
+| A lower price on the item | A 90.00 each (line 180.00); subtotal 205.00 | 205.00 |
+| A separate discount line in the cart totals | A 100.00 each; a campaign line −20.00 | 205.00 |
+
+"A lower price on the item" never changes the price on the product page or in the shop. A **Fixed Discount Per Item** takes the amount or the item's price, whichever is smaller, off each unit. A **Fixed Discount on Cart Total** is split across the target lines in proportion to their value and never exceeds their total.
+
 ## Step 3: Set Conditions (Optional)
 
 You can add specific rules to restrict who can use this discount.

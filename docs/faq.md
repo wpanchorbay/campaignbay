@@ -10,7 +10,7 @@ To ensure the plugin runs smoothly, your website should meet the following requi
 
 - WordPress Version 5.8 or higher
 - PHP Version 7.0 or higher
-- **WooCommerce** must be installed and activated.
+- **WooCommerce** (6.1 or higher) must be installed and activated.
 - **WP-Cron** must be enabled on your server for scheduling features to work automatically.
 
 ### Will CampaignBay slow down my website?
@@ -51,12 +51,14 @@ We have a dedicated guide that explains how the discount engine prioritizes and 
 
 This is controlled by a global setting. Navigate to **Settings → Cart Settings** and toggle the **"Allow Stacking with WooCommerce Coupons"** option.
 
-- **If OFF (Default):** The systems are mutually exclusive. If a CampaignBay discount is active, coupons cannot be applied, and vice-versa.
+- **If OFF (Default):** The systems are mutually exclusive. If a CampaignBay discount is active, coupons cannot be applied, and vice-versa. Since 1.2.0, ordinary coupons are also removed from the classic cart when stacking is off.
 - **If ON:** A customer can use a coupon code on top of a price that has already been discounted by CampaignBay.
 
 ### For Quantity Discounts, is a fixed discount ($5 off) applied once or to every item?
 
-It is applied to **every single item** that qualifies for the tier. For example, if the rule is "Buy 3 or more, get $5 off" and a customer buys 4 items, they will receive a total discount of $20 ($5 x 4).
+By default it is applied to **every single item** that qualifies for the tier. For example, if the rule is "Buy 3 or more, get $5 off" and a customer buys 4 items, they will receive a total discount of $20 ($5 x 4).
+
+Since 1.2.0 you can change this per campaign. In the campaign's settings, choose **Once to the whole line** instead of **Per item (default)** and the $5 comes off the line total a single time. This only affects tiers with a fixed amount.
 
 ### For Early Bird campaigns, what is counted: orders or quantity?
 
@@ -96,6 +98,43 @@ If you are troubleshooting an issue, the debug log is the best place to start.
 
 ---
 
+## Version 1.2.0 Questions
+
+### Can I use "yes" or "no" for fields when creating campaigns through the REST API?
+
+No. Since 1.2.0, campaign fields are validated as true booleans and strings. REST clients and import scripts must send real booleans (`true`/`false` or `1`/`0`), not values like `"yes"`. Requests that worked before with `"yes"` will now be rejected with a validation error.
+
+### Why can't I save my Quantity or Fixed Price campaign?
+
+These campaign types need at least one tier. Since 1.2.0 they can no longer be saved with an empty tier list. Add a tier (for example "Buy 3+, 10% off") and save again.
+
+### I set a usage limit of 10. How many orders will the campaign get?
+
+Exactly 10 orders. Before 1.2.0 the campaign expired one order early (after 9). A limit of N now expires the campaign after N orders. If an order is later cancelled, a campaign that expired from its limit is re-activated.
+
+### Do WooCommerce coupons work with CampaignBay discounts?
+
+Not by default. **Allow Stacking with WooCommerce Coupons** is OFF out of the box, and when it is off, ordinary coupons are removed from the classic cart. Turn it on under **Settings → Cart Settings** if you want shoppers to combine them.
+
+### I imported campaigns and they show as expired. Why?
+
+Imports keep each campaign's usage count. A campaign is only expired if its usage limit has really been reached. If you want it live again, raise the usage limit or lower the usage count in the imported file.
+
+### How do I upgrade to 1.2.0?
+
+1. Back up your site.
+2. Update CampaignBay Free to 1.2.0.
+3. Update CampaignBayPro to 1.1.0 if you use Pro. Pro 1.1.0 needs Free 1.1.13 or later.
+4. Clear the discount cache under **Settings → Global Settings**.
+
+See [Installation](./installation.md#upgrading) for details and the [Changelog](./changelog.md) for what changed.
+
+### What's new in 1.2.0?
+
+Countdown timers, a CampaignBay sale badge, offer messages, quantity-tier labels, minimum/maximum/step quantities, product tag targeting, and new conditions. See the [Changelog](./changelog.md).
+
+---
+
 ## CampaignBayPro Questions
 
 ### How do I upgrade to CampaignBayPro?
@@ -104,15 +143,16 @@ Visit [wpanchorbay.com/campaignbay](https://wpanchorbay.com/campaignbay) to purc
 
 ### Do I need the free plugin to use CampaignBayPro?
 
-Yes! CampaignBayPro is an extension that adds advanced features to the free CampaignBay plugin. Both must be installed and active.
+Yes! CampaignBayPro is an extension that adds advanced features to the free CampaignBay plugin. Both must be installed and active. Pro 1.1.0 requires Free 1.1.13 or later; if Free is older, Pro shows a notice asking you to update it.
 
 ### What Pro features are available?
 
-CampaignBayPro includes:
+CampaignBayPro 1.1.0 includes:
 
-- **BOGO Advanced (Buy X Get Y):** Create cross-sell offers with different buy and get products
-- **Product In Cart Discounts:** Trigger discounts when specific products are in the cart
-- **Advanced Conditions:** Target by Cart Total, Order History, Products in Cart, and more
+- **BOGO Advanced** and **Product In Cart** discounts
+- **10 more campaign types:** [Fixed Price](./campaigns/fixed-price-discounts.md), [Variation](./campaigns/variation-discounts.md), [Cheapest Item](./campaigns/cheapest-item-discounts.md), [Weight](./campaigns/weight-discounts.md), [Bulk Sum](./campaigns/bulk-sum-discounts.md), [Bundle](./campaigns/bundle-discounts.md), [Auto-add / Recommended Product](./campaigns/auto-add-recommended-product.md), [Free Gift](./campaigns/free-gift.md), [Category BOGO](./campaigns/category-bogo.md) and [Nth Unit](./campaigns/nth-unit-discounts.md)
+- **[Advanced Conditions](./core-concepts/pro-conditions.md):** Coupon code or link, order history, day and time, stock, attributes, email domain, payment and shipping, cart weight, and more
+- **[Offer Messages](./settings/offer-messages.md)** settings for shopper messages
 - **Priority Email Support:** Direct access to our development team
 
 Learn more at [wpanchorbay.com/campaignbay](https://wpanchorbay.com/campaignbay).

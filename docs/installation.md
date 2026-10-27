@@ -3,7 +3,7 @@
 Welcome to CampaignBay! This guide will walk you through installing both the free CampaignBay plugin and the optional CampaignBayPro extension.
 
 ::: info Documentation Version
-This documentation is valid for **CampaignBay 1.1.1** or higher and **CampaignBayPro 1.0.0** and higher.
+This documentation is valid for **CampaignBay 1.2.0** or higher and **CampaignBayPro 1.1.0** or higher. If you run older versions, update first. See the [Changelog](./changelog.md).
 :::
 
 ## Requirements
@@ -12,7 +12,8 @@ Before you begin, please ensure your WordPress environment meets the following m
 
 - **WordPress:** Version 5.8 or higher
 - **PHP:** Version 7.0 or higher
-- **WooCommerce:** The WooCommerce plugin must be installed and activated.
+- **WooCommerce:** The WooCommerce plugin must be installed and activated (version 6.1 or higher).
+- **CampaignBayPro 1.1.0** additionally requires **CampaignBay Free 1.1.13 or later** (we recommend 1.2.0).
 
 ::: tip
 If you are unsure about any of these requirements, please contact your hosting provider for assistance.
@@ -49,7 +50,7 @@ After activation, you should see a "Plugin activated" confirmation message. Look
 
 ## Installing CampaignBayPro
 
-CampaignBayPro is a premium extension that adds advanced features to the free plugin. [**Purchase CampaignBayPro**](https://wpanchorbay.com/campaignbay) to unlock BOGO Advanced, Product In Cart discounts, and Advanced Conditions.
+CampaignBayPro is a premium extension that adds advanced features to the free plugin. [**Purchase CampaignBayPro**](https://wpanchorbay.com/campaignbay) to unlock 13 extra campaign types (including Fixed Price, Bundle, Free Gift and Nth Unit) and Advanced Conditions. See [Free vs Pro](./campaigns/index.md#free-vs-pro-campaign-types).
 
 ::: warning Important
 You must install and activate the free CampaignBay plugin **before** installing CampaignBayPro.
@@ -92,6 +93,16 @@ Once activated, you'll see a "License Active" confirmation, and all Pro features
 
 ---
 
+## Upgrading
+
+1. Take a backup of your site (or at least your database).
+2. Update **CampaignBay Free** first, from **Plugins → Installed Plugins** or by uploading the new `campaignbay.zip`.
+3. Then update **CampaignBayPro**. Pro 1.1.0 will not run on a Free version older than 1.1.13.
+4. Go to **CampaignBay → Settings → Global Settings** and click **Clear Discount Cache**.
+5. Open a few active campaigns and check they look right. Campaign data is kept during updates.
+
+---
+
 ## Troubleshooting
 
 ### WooCommerce is not active
@@ -100,7 +111,7 @@ CampaignBay is an add-on for WooCommerce and cannot run without it. Please ensur
 
 ### CampaignBay is not active (Pro only)
 
-CampaignBayPro requires the free CampaignBay plugin (version 1.1.1 or higher) to be installed and active. If you see a warning message, please update or activate the free plugin first.
+CampaignBayPro 1.1.0 requires the free CampaignBay plugin (version 1.1.13 or higher) to be installed and active. If you see a warning message, please update or activate the free plugin first.
 
 ### License activation failed (Pro only)
 
@@ -121,6 +132,8 @@ Now that you've successfully installed the plugin, the best place to start is th
 
 If you've installed CampaignBayPro, check out the Pro-exclusive features:
 
+- **[All campaign types: Free vs Pro &rarr;](./campaigns/index.md#free-vs-pro-campaign-types)**
 - **[BOGO Advanced Discounts &rarr;](./campaigns/bogo-advanced-discounts.md)**
 - **[Product In Cart Discounts &rarr;](./campaigns/product-in-cart-discounts.md)**
-- **[Advanced Conditions &rarr;](./core-concepts/conditions.md)**
+- **[Advanced Conditions &rarr;](./core-concepts/pro-conditions.md)**
+- **[What's new &rarr;](./changelog.md)**

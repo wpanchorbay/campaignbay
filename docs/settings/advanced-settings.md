@@ -11,6 +11,8 @@ The **Advanced Settings** tab contains options for data management and license a
 > [!CAUTION]
 > This is a destructive action. Only enable this if you want to completely remove all CampaignBay data.
 
+Helper text: *Delete all data when the plugin is uninstalled.* **Default: unchecked.**
+
 - **Checked:** When you uninstall the plugin, a cleanup script will **permanently delete** all associated database tables and options.
 - **Unchecked:** Your campaign data will be preserved if you reinstall the plugin later.
 
@@ -24,7 +26,7 @@ This section is for [**CampaignBayPro**](https://wpanchorbay.com/campaignbay) us
 
 ### License Key
 
-Enter the license key you received upon purchase of CampaignBayPro.
+Enter the license key you received upon purchase of CampaignBayPro. For security the saved key is shown masked, and saving the settings never changes it; only **Activate License** does.
 
 ### Activate License
 

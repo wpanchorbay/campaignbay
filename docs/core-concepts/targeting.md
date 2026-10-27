@@ -10,11 +10,12 @@ When you create or edit any campaign, you will see the "DISCOUNT TARGET" dropdow
 
 ![The main targeting options](./../public/core-targeting-target-entire-store.png)
 
-There are three primary methods for targeting your discounts:
+There are four methods for targeting your discounts:
 
 1.  Entire Store
 2.  By Product
 3.  By Product Category
+4.  By Product Tag
 
 Let's explore each option in detail.
 
@@ -45,14 +46,39 @@ Let's explore each option in detail.
 
 ![Selecting product categories](./../public/core-targeting-target-by-category.png)
 
-- **Select Categories:** Click inside the box and start typing the name of a category to search. Select one or more categories from the list. The discount will apply to all products within the selected categories (including their sub-categories).
+- **Select Categories:** Click inside the box and start typing the name of a category to search. Select one or more categories from the list. The discount will apply to all products assigned to the selected categories.
 - **Exclude Items:** This checkbox inverts the logic.
   - **Unchecked (Default):** The discount will apply **only** to products within the categories you selected.
   - **Checked:** The discount will apply to **all products in your store EXCEPT** for those in the categories you selected.
 
+::: warning Sub-categories are matched exactly
+CampaignBay matches the exact categories you select. A product that is only assigned to a *child* category (for example "T-Shirts") is **not** discounted when you select only the *parent* ("Clothing"). Select the child categories too, or assign the products to the parent category as well.
+:::
+
+### 4. By Product Tag
+
+- **What it does:** Applies the discount to every product that carries one or more of the selected WooCommerce product tags.
+- **Best for:** Promotions that cut across categories, such as a "summer" or "clearance" tag, or a hand-managed "on promotion" tag you add and remove as products come and go.
+- **Configuration:** When you select **By Product Tag**, a **"Select Tags"** field appears.
+
+![Target set to By Product Tag with two tags selected](./../public/core-targeting-target-by-tag.png)
+
+- **Select Tags:** Click inside the box and start typing a tag name. Select one or more tags. A product matches if it has **at least one** of the selected tags.
+- **Exclude Items:** Works exactly like it does for products and categories.
+  - **Unchecked (Default):** Only products with a selected tag are discounted.
+  - **Checked:** Every product **except** those with a selected tag is discounted.
+
+::: tip Tip
+Because tags are managed in **Products → Tags** and on each product, you can change which products are on sale without ever editing the campaign: just add or remove the tag on the product.
+:::
+
+## Variable Products
+
+For **By Product**, **By Product Category** and **By Product Tag**, a variation always follows its parent product. Selecting a variable product (or giving it a matching category or tag) discounts all of its variations.
+
 ## Inverting the Logic: The 'Exclude Items' Checkbox
 
-For both "By Product" and "By Product Category" targeting, you will see an **`Exclude Items`** checkbox. This is a powerful feature that completely inverts the logic of your selection, allowing you to create store-wide discounts with a few specific exceptions.
+For "By Product", "By Product Category" and "By Product Tag" targeting, you will see an **`Exclude Items`** checkbox. This is a powerful feature that completely inverts the logic of your selection, allowing you to create store-wide discounts with a few specific exceptions.
 
 ![The Exclude Items checkbox](./../public/core-targeting-targeting-exclude-items.png)
 
@@ -85,6 +111,22 @@ For both "By Product" and "By Product Category" targeting, you will see an **`Ex
   2.  **Select Categories:** Search for and select the "New Arrivals" category.
   3.  **Exclude Items:** **Check this box.**
 - **Result:** The discount will apply to every product in your store _except_ for those in the "New Arrivals" category.
+
+**Example 3: Everything Except "Clearance"-Tagged Products**
+
+- **Setup:** `Discount Target: By Product Tag` → select the "Clearance" tag → **Exclude Items** checked.
+- **Result:** All products except those tagged "Clearance" are discounted.
+
+## Exclude Sale Items
+
+The **Exclude Sale Item** checkbox (in the *Others* section of the campaign sidebar) works alongside any target type. When it is checked, any product that already has a WooCommerce **sale price** in effect is skipped by this campaign, even if it matches the target. Products with no sale price are unaffected.
+
+- **Example:** A 20% store-wide campaign with **Exclude Sale Item** checked. A $20 T-shirt that is on sale for $15 stays at $15. A full-price $30 mug becomes $24.
+- Only a sale price you set on the product counts. A price reduced by *another CampaignBay campaign* does not count as "on sale" for this checkbox.
+
+## Targeting vs. Conditions
+
+Targeting decides *which products* a campaign covers. [Conditions](./conditions.md) decide *who and under what cart circumstances* it applies. A product receives the discount only when it passes both.
 
 ## Next Steps
 

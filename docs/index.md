@@ -39,16 +39,21 @@ This documentation will guide you through every feature, from installing the plu
 - **Early Bird Discounts:** Reward the first X customers with special pricing. A live counter shows remaining slots.
 - **BOGO (Buy One Get One):** Classic "Buy 2, Get 1 Free" or "Buy 1, Get 1 at 50% Off" deals. Free items are added directly to the cart.
 
+See the [full list of Free and Pro campaign types](/campaigns/#free-vs-pro-campaign-types).
+
 **Targeting & Conditions:**
 
-- **Flexible Targeting:** Apply discounts to your entire store, specific products, or categories.
+- **Flexible Targeting:** Apply discounts to your entire store, specific products, categories, or product tags.
 - **Product & Category Exclusions:** Fine-tune which items are excluded from discounts.
-- **User Role Conditions:** Restrict campaigns to Wholesalers, VIPs, or any WordPress role.
+- **Conditions:** Restrict campaigns by user role, guest vs logged-in, cart total, or cart item quantity.
 - **Smart Stacking Logic:** Control how discounts interact with each other and native WooCommerce coupons.
 - **Coupon Compatibility:** Works seamlessly with WooCommerce coupons (configurable stacking).
 
 **Display & Messaging:**
 
+- **Countdown Timers:** Show a live countdown on product, shop and cart pages, or anywhere with a shortcode.
+- **Sale Badge & Offer Messages:** A CampaignBay sale badge, category/shop offer messages and campaign promo blurbs.
+- **Quantity Limits:** Set a minimum, maximum and step quantity per campaign.
 - **Customizable Messages:** Dynamic placeholders like `{percentage_off}`, `{buy_quantity}` for promotional text.
 - **Product Page Display:** Discount tables and banners automatically appear on product pages.
 - **Cart Integration:** Automatic discounts with strikethrough pricing in the cart.
@@ -70,11 +75,21 @@ This documentation will guide you through every feature, from installing the plu
 
 ## Pro Features
 
-Unlock advanced capabilities with [**CampaignBayPro**](https://wpanchorbay.com/campaignbay):
+Unlock advanced capabilities with [**CampaignBayPro**](https://wpanchorbay.com/campaignbay). Pro 1.1.0 adds these campaign types:
 
-- **BOGO Advanced (Buy X Get Y):** Create cross-sell offers like "Buy a Laptop, Get a Mouse Free" with separate Buy and Get product sets.
-- **Product In Cart Discounts:** Trigger discounts when specific products are in the cart – perfect for accessory upsells.
-- **Advanced Conditions:** Target by Cart Total, Order History, Specific Products in Cart, and more.
+- **[Fixed Price](/campaigns/fixed-price-discounts):** Sell a product, or a quantity of it, at an exact price.
+- **[Variation Discounts](/campaigns/variation-discounts):** Discount specific variations of variable products.
+- **[Cheapest Item](/campaigns/cheapest-item-discounts):** Discount the cheapest item(s) in a group, like "buy 3, cheapest is free".
+- **[Weight Discounts](/campaigns/weight-discounts):** Reward heavier or lighter carts by total weight.
+- **[Bulk Sum](/campaigns/bulk-sum-discounts):** Tiered discounts based on the combined quantity of a group of products.
+- **[Bundle Discounts](/campaigns/bundle-discounts):** Discount when customers buy a set of products together.
+- **[Auto-add / Recommended Product](/campaigns/auto-add-recommended-product):** Automatically add, or recommend, a product when conditions are met.
+- **[Free Gift](/campaigns/free-gift):** Give a free product when the cart qualifies.
+- **[Category BOGO](/campaigns/category-bogo):** Buy from one category, get items from another.
+- **[Nth Unit](/campaigns/nth-unit-discounts):** Discount every 2nd, 3rd or Nth unit.
+- **[BOGO Advanced](/campaigns/bogo-advanced-discounts)** and **[Product In Cart](/campaigns/product-in-cart-discounts):** Cross-sell offers and cart-triggered discounts.
+- **[Advanced Conditions](/core-concepts/pro-conditions):** Coupon code or link activation, order history, day and time, stock, product attribute, email domain, payment method, shipping method and zone, cart weight, and more.
+- **[Offer Messages](/settings/offer-messages):** Shopper messages for each Pro offer type.
 - **Priority Email Support:** Get direct access to our development team.
 
 [**Get CampaignBayPro →**](https://wpanchorbay.com/campaignbay)

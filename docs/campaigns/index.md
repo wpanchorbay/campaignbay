@@ -33,7 +33,7 @@ Click the filter icon to open advanced filtering options:
 
 ![Filter Dropdown](../public/campaigns-overview-campaigns-filter-dropdown.png)
 
-Filter by **Status** (Active, Inactive) or **Type** (Scheduled, Quantity, BOGO, etc.).
+Filter by **Status** (Active, Inactive) or **Type** (Scheduled, Quantity, Early Bird, BOGO, and any Pro types).
 
 Active filters appear as removable pills:
 
@@ -115,22 +115,41 @@ Select multiple campaigns using checkboxes, then use the bulk action bar at the 
 
 ---
 
+## Free vs Pro Campaign Types
+
+CampaignBay Free includes four campaign types. [CampaignBayPro](https://wpanchorbay.com/campaignbay) adds many more.
+
+| Campaign type | What it does | Plan |
+| --- | --- | --- |
+| [Scheduled](./scheduled-discounts.md) | Time-limited sale with start and end dates | Free |
+| [Quantity](./quantity-discounts.md) | Tiered discounts as quantity grows | Free |
+| [Early Bird](./early-bird-discounts.md) | Special pricing for the first X orders | Free |
+| [BOGO](./bogo-discounts.md) | Buy X, get the same product free or discounted | Free |
+| [BOGO Advanced](./bogo-advanced-discounts.md) | Buy X of one set, get Y from another | Pro |
+| [Product In Cart](./product-in-cart-discounts.md) | Discount triggered by specific products in the cart | Pro |
+| [Fixed Price](./fixed-price-discounts.md) | Sell at an exact price | Pro |
+| [Variation Discounts](./variation-discounts.md) | Discount chosen variations | Pro |
+| [Cheapest Item](./cheapest-item-discounts.md) | Discount the cheapest item(s) in the cart | Pro |
+| [Weight Discounts](./weight-discounts.md) | Discount by total cart weight | Pro |
+| [Bulk Sum](./bulk-sum-discounts.md) | Tiers on the combined quantity of a product group | Pro |
+| [Bundle](./bundle-discounts.md) | Discount for buying a set together | Pro |
+| [Auto-add / Recommended Product](./auto-add-recommended-product.md) | Add or suggest a product automatically | Pro |
+| [Free Gift](./free-gift.md) | Free product when the cart qualifies | Pro |
+| [Category BOGO](./category-bogo.md) | Buy from one category, get from another | Pro |
+| [Nth Unit](./nth-unit-discounts.md) | Discount every Nth unit | Pro |
+
+::: tip Tiers are required
+Quantity and Fixed Price campaigns need at least one tier. Since Free 1.2.0 they can't be saved without one.
+:::
+
+---
+
 ## Next Steps
 
-Now that you know how to manage your campaigns, explore each campaign type:
-
-**Free Campaign Types:**
-
-- **[Scheduled Discounts &rarr;](./scheduled-discounts.md)**
-- **[Quantity Discounts &rarr;](./quantity-discounts.md)**
-- **[Early Bird Discounts &rarr;](./early-bird-discounts.md)**
-- **[BOGO (Buy X Get X) &rarr;](./bogo-discounts.md)**
-
-**Pro Campaign Types:** ([Get CampaignBayPro](https://wpanchorbay.com/campaignbay))
-
-- **[BOGO Advanced (Buy X Get Y) &rarr;](./bogo-advanced-discounts.md)** – Cross-sell with different buy/get products
-- **[Product In Cart &rarr;](./product-in-cart-discounts.md)** – Trigger discounts based on cart contents
+Now that you know how to manage your campaigns, explore each campaign type using the table above.
 
 **Conditions:**
 
-- **[Conditions &rarr;](../core-concepts/conditions.md)** – Target by User Role, Cart Total, Order History, and more
+- **[Conditions &rarr;](../core-concepts/conditions.md)** – Target by User Role, guest vs logged-in, Cart Total and Cart Item Quantity (Free)
+- **[Pro Conditions &rarr;](../core-concepts/pro-conditions.md)** – Order history, coupon activation, day and time, stock, shipping and more
+- **[Offer Messages &rarr;](../settings/offer-messages.md)** – Shopper messages for Pro offer types

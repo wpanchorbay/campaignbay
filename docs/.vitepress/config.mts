@@ -140,6 +140,26 @@ export default defineConfig({
               { text: 'BOGO Advanced', link: '/campaigns/bogo-advanced-discounts' },
               { text: 'Product In Cart', link: '/campaigns/product-in-cart-discounts' },
             ]
+          },
+          {
+            text: 'Pro: Price Types',
+            items: [
+              { text: 'Fixed Price', link: '/campaigns/fixed-price-discounts' },
+              { text: 'Variation Discount', link: '/campaigns/variation-discounts' },
+              { text: 'Cheapest Item', link: '/campaigns/cheapest-item-discounts' },
+              { text: 'Weight Based', link: '/campaigns/weight-discounts' },
+              { text: 'Bulk Quantity (Mixed)', link: '/campaigns/bulk-sum-discounts' },
+            ]
+          },
+          {
+            text: 'Pro: Offer Types',
+            items: [
+              { text: 'Product Bundle', link: '/campaigns/bundle-discounts' },
+              { text: 'Auto-Add Recommended', link: '/campaigns/auto-add-recommended-product' },
+              { text: 'Free Gift', link: '/campaigns/free-gift' },
+              { text: 'Category BOGO', link: '/campaigns/category-bogo' },
+              { text: 'Nth Unit Discount', link: '/campaigns/nth-unit-discounts' },
+            ]
           }
         ]
       },
@@ -151,6 +171,7 @@ export default defineConfig({
           { text: 'Product Settings', link: '/settings/product-settings' },
           { text: 'Cart Settings', link: '/settings/cart-settings' },
           { text: 'Advanced Settings', link: '/settings/advanced-settings' },
+          { text: 'Offer Type Messages (Pro)', link: '/settings/offer-messages' },
         ]
       },
 
@@ -160,10 +181,12 @@ export default defineConfig({
           { text: 'The Discount Engine', link: '/core-concepts/understanding-the-engine' },
           { text: 'Scheduling & Automation', link: '/core-concepts/scheduling-and-automation' },
           { text: 'How to Use Conditions', link: '/core-concepts/conditions' },
+          { text: 'Pro Conditions', link: '/core-concepts/pro-conditions' },
           { text: 'Targeting', link: '/core-concepts/targeting' },
         ]
       },
       { text: 'FAQ', link: '/faq' },
+      { text: 'Changelog', link: '/changelog' },
     ],
 
 

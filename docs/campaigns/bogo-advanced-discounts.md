@@ -93,9 +93,13 @@ The status of your campaign is closely tied to the scheduling system, which uses
 
 ## Step 6: Display Configurations
 
-- **Automatically Add Free Product To Cart:**
-  - **Checked (Recommended):** The "Get Product" acts as a gift and is auto-added.
-  - **Unchecked:** The customer must manually add the "Get Product" to their cart to see the discount.
+- **Repeat for every full set:** Buy 2 get 1: with this on, buying 4 gives 2 free. Off: the offer applies once, so buying 2, 4 or 9 all give 1 free. See [How the Free Items Work](#how-the-free-items-work).
+- **Add the free product to the cart automatically** (shown as _Automatically Add Free Product To Cart_ in older versions):
+  - **On (Recommended):** The "Get Product" is added to the cart for the shopper as its own free line.
+  - **Off:** The shopper adds the "Get Product" themselves and it becomes free.
+- **Apply the free item as:** shown **only when automatic adding is off**. Choose **A lower price on the item** (the free unit's price drops to zero) or **A separate discount line in the cart totals** (the item keeps its price and a negative line appears in the totals).
+
+![BOGO Advanced Settings section with Repeat for every full set on, auto-add off, and the Apply the free item as field shown](./../public/bogo-advanced-repeat-and-apply-as.png)
 
 ### Messaging Options
 
@@ -113,11 +117,58 @@ The status of your campaign is closely tied to the scheduling system, which uses
 
 ![Cart Message Location](./../public/bogo-advanced-cart-message-location.png)
 
-- **Cart Page Message Location:** Choose where the cart message should appear (e.g., next to the line item name).
+- **Cart Page Message Location:** Choose where the cart message should appear: **Line Item Name** (under the item's name), **Notice** (a notice at the top of the cart) or **Don't Show**.
 
 ## Step 7: Save the Campaign
 
 Once you have configured all the options, click the **Save Campaign** button. You will be redirected to the "All Campaigns" list.
+
+## How the Free Items Work
+
+### Automatic mode (free product added for the shopper)
+
+- **The free item is its own cart line.** It is a separate line from anything the shopper bought, priced at zero. If the shopper also buys the same product, they get a paid line and a free line, never one mixed line.
+- **The quantity is locked.** The shopper sees a plain number (no quantity box, no remove link). The line follows the buy quantity: change the Hoodies and the free Mug count updates.
+- **Stock limits the free quantity.** If you have 1 Mug in stock and the offer earns 2, the shopper gets 1 free. The cap also takes into account Mugs the shopper is already paying for in the cart. If the product allows **backorders**, no cap is applied.
+- **Free lines never count as buy units.** A free, gift or automatically added line cannot help the shopper earn another free item.
+- **On the order** the free line is labelled **Free item**.
+
+### Manual mode (shopper adds the free product)
+
+The shopper adds the "Get Product" to the cart as usual and the deal makes up to the earned quantity free, in place. Nothing is added for them.
+
+- Example: Buy 2 Hoodies (A, 100.00), get 1 Mug (F, 30.00). Cart: A ×2 and F ×3. One Mug is free, so F costs 20.00 on average per unit for the line (30 + 30 + 0 = 60.00). **Total 260.00.**
+- The free quantity is never more than the units in the cart.
+- With **A separate discount line in the cart totals**, the Mug keeps its price of 30.00 and a line of −30.00 appears in the totals. The total is the same.
+- A unit is **never used twice**: a unit that counted as a buy unit cannot also be the free reward.
+
+### How many free items are earned
+
+| Buy 2 get 1 | Repeat on | Repeat off |
+| --- | --- | --- |
+| Buy 1 | 0 free | 0 free |
+| Buy 2 | 1 free | 1 free |
+| Buy 3 | 1 free | 1 free |
+| Buy 4 | 2 free | 1 free |
+| Buy 9 | 4 free | 1 free |
+
+Repeat also works in manual mode. With Buy 2 Hoodies (100.00) get 1 Mug, a cart of A ×4 and F ×2: repeat on makes both Mugs free (total 400.00); repeat off makes one free (total 430.00).
+
+### Several tiers on the same buy product
+
+Tiers that share a Buy Product are **alternatives, not extras**. The tier with the greatest Buy Quantity that the cart reaches is used; if two tiers have the same Buy Quantity, the one with the larger Get Quantity wins.
+
+Example: tier 1 is Buy 2 get 1, tier 2 is Buy 4 get 3 (repeat on). A ×4 gives 3 free (tier 2), and A ×8 gives 6 free (tier 2 twice). Tiers with **different** Buy Products are independent of each other.
+
+### Usage limits
+
+An order counts as **one** use of the campaign, however many free units it contains. Once the usage limit is reached, the free line is no longer added. If the order is cancelled or refunded, the use is given back.
+
+### Cart messages
+
+The cart message appears in the place you chose under **Cart Page Message Location**. In the block-based cart the quantity is read-only as in the classic cart, but the "Offer" row is not displayed. The product page banner shows the first tier of the campaign.
+
+![Cart with a paid line and a separate free line](../public/bogo-advanced-free-line-cart.png)
 
 Next, learn how to offer discounts based on other products in the cart.
 

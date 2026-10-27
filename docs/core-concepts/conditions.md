@@ -27,142 +27,125 @@ Click **Add New Condition** to see the available options:
 
 ## Available Conditions
 
-### 1. User Role (Single)
+CampaignBay Free includes four conditions: **User Role**, **Guest / Logged-in**, **Cart Total** and **Cart Item Quantity**.
 
-Restrict the campaign to users with a **single specific** WordPress role.
+::: info More conditions in Pro
+CampaignBay Pro adds further conditions (such as multiple roles, specific users and order history). See [Pro Conditions](/core-concepts/pro-conditions).
+:::
+
+### 1. User Role
+
+Restrict the campaign to shoppers who have a specific WordPress role.
 
 ![User Role Condition](../public/core-conditions-conditions-user-role.png)
 
-#### With / Without Toggle
-
-![With Without Dropdown](../public/core-conditions-conditions-with-without.png)
-
-| Option      | Behavior                                                  |
-| ----------- | --------------------------------------------------------- |
-| **with**    | Only users _with_ the selected role can use this discount |
-| **without** | Users _without_ the selected role can use this discount   |
-
-#### Select User Role
+The rule reads: **"Apply this campaign to only users with [role] role."**
 
 ![Role Selection Dropdown](../public/core-conditions-conditions-role-select.png)
 
-Choose from any WordPress role on your site:
+Choose from any role on your site:
 
 - Administrator, Editor, Author, Contributor, Subscriber
 - WooCommerce roles: Customer, Shop Manager
 - Custom roles from other plugins
 
+Guests (visitors who are not logged in) have no role, so they never match a User Role rule. To target guests, use the **Guest / Logged-in** condition below.
+
+You can add only one User Role rule per campaign. Once it exists, the entry shows "Already in Use" in the dropdown.
+
 ::: tip Use Case
-Create a "VIP Only" sale: `User Role` → `with` → `VIP Customer`
+Create a "VIP Only" sale: `User Role` → `VIP Customer`
 :::
 
 ---
 
-### 2. User Roles (Multiple)
+### 2. Guest / Logged-in
 
-Restrict the campaign to users with **one of several** WordPress roles.
+Restrict the campaign to visitors who are **not logged in**, or only to **logged-in customers**.
 
-![User Roles Condition](../public/core-conditions-conditions-user-roles.png)
+![Guest / Logged-in rule with the select open](../public/core-conditions-conditions-user-status.png)
 
-#### With / Without Toggle
+| Option                      | Behavior                                            |
+| --------------------------- | --------------------------------------------------- |
+| **Guests (not logged in)**  | The discount applies only to visitors without an account session |
+| **Logged-in customers**     | The discount applies only to shoppers who are logged in |
 
-![User Roles With Without](../public/core-conditions-conditions-user-roles-with-without.png)
-
-| Option      | Behavior                                                          |
-| ----------- | ----------------------------------------------------------------- |
-| **with**    | Only users with _any_ of the selected roles can use this discount |
-| **without** | Users _without any_ of the selected roles can use this discount   |
-
-#### Multi-Select Roles
-
-![User Roles Selected](../public/core-conditions-conditions-user-roles-selected.png)
-
-Select multiple roles — user must have **at least one** of the selected roles.
+The default for a new rule is **Guests (not logged in)**. You can add this rule together with a User Role rule (using **Match All**) to build things like "logged-in customers with the Customer role".
 
 ::: tip Use Case
-Create a wholesale discount: `User Roles` → `with` → `Wholesale Buyer, VIP Customer`
+Encourage sign-ups: `Guest / Logged-in` → `Logged-in customers`. Guests will not see the discounted price, so promote the offer and invite them to create an account.
 :::
 
 ---
 
-### 3. Users (Specific)
+### 3. Cart Total
 
-Restrict the campaign to **specific individual users** by name or email.
+Apply the campaign only when the cart total meets a threshold.
 
-![Users Condition](../public/core-conditions-conditions-users.png)
+![Cart Total rule with operator and amount](../public/core-conditions-conditions-cart-total.png)
 
-#### Include / Exclude Toggle
+Choose an operator and enter an amount:
 
-![Users Include Exclude](../public/core-conditions-conditions-users-include-exclude.png)
+| Operator                      | Behavior                              |
+| ----------------------------- | ------------------------------------- |
+| **Greater than or equal to**  | Cart total is at least the amount     |
+| **Less than or equal to**     | Cart total is at most the amount      |
+| **Greater than**              | Cart total is above the amount        |
+| **Less than**                 | Cart total is below the amount        |
+| **Equal to**                  | Cart total equals the amount (compared at your store's price precision, e.g. 2 decimals) |
 
-| Option      | Behavior                                                   |
-| ----------- | ---------------------------------------------------------- |
-| **Include** | Only the selected users can use this discount              |
-| **Exclude** | Everyone _except_ the selected users can use this discount |
+There is no "not equal" or "between" operator. To build a range, add two Cart Total rules and set **Match All**: for example `>= 50` and `<= 100`.
 
-#### Multi-Select Users
+**What "cart total" means.** CampaignBay waits until WooCommerce has calculated the cart, and compares the amount against the cart total *before this campaign's own discount*. That total already reflects discounts from other campaigns that don't depend on the cart total, WooCommerce coupons, and any shipping, fees and taxes WooCommerce has added. It is not the plain product subtotal.
 
-Select multiple users from the dropdown — search by name or email.
+Because the cart must be calculated first, a campaign with a Cart Total rule does **not** show its discount on product pages or shop listings. The discount appears once the shopper has the items in the cart.
 
-::: tip Use Case
-Create a personal thank-you discount for top customers: `Users` → `Include` → `john@example.com, jane@example.com`
+::: warning Newly added rules start at "Equal to 0"
+A freshly added Cart Total rule is set to `== 0`. Change the operator and amount before saving, otherwise the campaign will almost never apply.
 :::
-<!-- 
+
+::: tip Worked example
+Rule: `Cart Total` → `>=` → `100`, discount: 10% on the entire store.
+A cart worth $120 gets the discount. A cart worth $80 does not. If the shopper's cart drops below $100 after removing an item, the discount disappears again.
+:::
+
 ---
 
-## Pro Conditions
+### 4. Cart Item Quantity
 
-[**CampaignBayPro**](https://wpanchorbay.com/campaignbay) unlocks additional powerful conditions:
+Apply the campaign only when the cart holds a certain number of items.
 
-### Order History Count
+![Cart Item Quantity rule with operator and quantity](../public/core-conditions-conditions-cart-items.png)
 
-Reward loyal customers based on their previous order count.
+It uses the same five operators as Cart Total (`>=`, `<=`, `>`, `<`, `==`) and a whole number. The default for a new rule is `>= 1`.
 
-| Operator         | Behavior                                        |
-| ---------------- | ----------------------------------------------- |
-| **greater than** | Customer must have more than X previous orders  |
-| **less than**    | Customer must have fewer than X previous orders |
-| **equal to**     | Customer must have exactly X previous orders    |
+The count is the **total number of units** across all cart lines (3 T-shirts plus 2 mugs counts as 5). Free items added by a BOGO campaign are **not** counted.
 
-::: tip Use Case
-Create a loyalty reward: `Order History Count` → `greater than` → `5` to reward customers with 6+ orders.
+Like Cart Total, this is checked after the cart is calculated, so the discount shows up in the cart rather than on product pages.
+
+::: tip Worked example
+Rule: `Cart Item Quantity` → `>=` → `3`, discount: 15% on a category.
+A cart with 3 eligible items gets the discount; with 2 it does not.
 :::
 
-### Cart Total / Subtotal
+---
 
-Trigger discounts when the cart reaches a certain value.
+### Using several conditions together
 
-| Operator         | Behavior                          |
-| ---------------- | --------------------------------- |
-| **greater than** | Cart total must exceed X amount   |
-| **less than**    | Cart total must be below X amount |
+- **Match All** with `Guest / Logged-in = Logged-in` and `Cart Total >= 100`: only logged-in shoppers with a cart of $100 or more.
+- **Match Any** with `User Role = Wholesale` or `Cart Item Quantity >= 10`: wholesale buyers, or anyone buying ten or more units.
+- A campaign with **no conditions** applies to everyone.
 
-::: tip Use Case
-Free shipping incentive: `Cart Total` → `greater than` → `$100` to encourage larger purchases.
+::: tip
+Conditions only decide *who or what cart* qualifies. *Which products* are discounted is decided by [Targeting](./targeting.md).
 :::
 
-### Specific Product in Cart
-
-Activate a campaign only when a designated "trigger" product is present.
-
-::: tip Use Case
-Cross-sell: When customer adds a Camera to cart, offer 20% off Camera Bags.
-:::
-
-### Specific Category in Cart
-
-Apply discounts when a product from a specific category is in the cart.
-
-::: tip Use Case
-Bundle deal: When customer has any item from "Electronics," offer 15% off "Accessories."
-:::
- -->
 [**Upgrade to CampaignBayPro →**](https://wpanchorbay.com/campaignbay)
 
 ---
 
 ## Next Steps
 
-Now that you know how to apply specific rules to users and roles, learn how to target your discounts to specific products and categories.
+Now that you know how to apply specific rules to shoppers and carts, learn how to target your discounts to specific products and categories.
 
 - **[Targeting &rarr;](./targeting.md)**
