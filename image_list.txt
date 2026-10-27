@@ -9,7 +9,7 @@ bogo-advanced-sidebar-schedule-dates.png
 bogo-advanced-sidebar-usage-limit.png
 bogo-advanced-tiers-empty.png
 bogo-advanced-tiers-example.png
-
+ 
 bogo-cart-message-format.png
 bogo-cart-message-location.png
 bogo-conditions-overview.png

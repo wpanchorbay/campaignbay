@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/',
+  base: '/campaignbay',
   title: "CampaignBay Documentation",
   description: "Comprehensive documentation for CampaignBay - Advanced WooCommerce Discount Campaigns",
 
@@ -108,18 +108,18 @@ export default defineConfig({
     nav: [
       { text: 'Get PRO', link: 'https://wpanchorbay.com/campaignbay' },
       { text: 'Getting Started', link: '/installation' },
-      {
-        text: 'Version',
-        items: [
+      //{
+        //text: 'Version',
+        //items: [
           // use it for all branches
           // { text: 'Latest', link: '../' },
           // use it for main branch
-          { text: 'Latest', link: '/', },
-          { text: '1.0.0', link: 'https://campaignbay.github.io/1.0.0/', },
-          { text: '1.0.0-PRO', link: 'https://campaignbay.github.io/1.0.0-PRO/', },
-          { text: '1.1.0', link: 'https://campaignbay.github.io/1.0.0-PRO/', }
-        ]
-      },
+         // { text: 'Latest', link: '/', },
+          //{ text: '1.0.0', link: 'https://campaignbay.github.io/1.0.0/', },
+         // { text: '1.0.0-PRO', link: 'https://campaignbay.github.io/1.0.0-PRO/', },
+          //{ text: '1.1.0', link: 'https://campaignbay.github.io/1.0.0-PRO/', }
+        //]
+     // },
     ],
 
     // Enhanced sidebar with better organization
